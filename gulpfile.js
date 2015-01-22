@@ -3,17 +3,26 @@ var gulp = require('gulp'),
   livereload = require('gulp-livereload'),
   less = require('gulp-less'),
   es6transpiler = require('gulp-es6-transpiler'),
-  cached = require('gulp-cached');
+  cached = require('gulp-cached'),
+  http = require('http'),
+  st = require('st');
 
 gulp.task('less', function () {
-  gulp.src('./public/css/*.less')
+  gulp.src('./sites/**/*.less')
     .pipe(less())
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest('./sites/'))
     .pipe(livereload());
 });
 
-gulp.task('watch', function() {
-  gulp.watch('public/css/*.less', ['less']);
+gulp.task('server', function(done) {
+  http.createServer(
+    st({ path: __dirname, index: 'index.html', cache: false })
+  ).listen(8080, done);
+});
+
+gulp.task('watch', ['server'], function() {
+  livereload.listen();
+  gulp.watch('./sites/**/*.less', ['less']);
   gulp.watch('src/**/*.js', ['es6']);
 });
 
