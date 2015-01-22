@@ -408,7 +408,7 @@ a:hover {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .box-color h3 {
   font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -863,7 +863,7 @@ h6.meta a:before {
 #main > footer {
   padding: 40.8px 0;
   padding: 4.08rem 0;
-  border-top: 3px solid #fcfcfc;
+  /* border-top: 3px solid #fcfcfc; */
 }
 #breadcrumb {
   padding-top: 20.4px;
@@ -932,7 +932,7 @@ body.not-front #intro .content{
 }
 #intro .content{
   text-align: center;
-  text-shadow: 1px 1px 0 #fcfcfc;
+  /* text-shadow: 1px 1px 0 #fcfcfc; */
 }
 
 body.page-node-711 #intro .content{
@@ -1090,7 +1090,9 @@ article .title .col-sm-10{
 .sticky .fields,
 .articlelist .fields {
 *zoom: 1;
-border: 1px dashed #555555;
+
+
+  /* border: 1px dashed #555555; */
 background: #fcfcfc;   
 color: #5e1c11;   
 position: relative;
