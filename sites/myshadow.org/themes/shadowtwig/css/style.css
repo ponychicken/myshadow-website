@@ -181,7 +181,7 @@ h1,
 	    Unfortunately I don't think this is doing anything, since fontspring fonts have opentype features disabled.
 	    See here: http://www.fontspring.com/support/general/difference-between-desktop-font-and-webfont
     */
-  color: #c1272d;
+  color: #c12b09;
   line-height: 1;
   font-size: 45px;
   font-size: 4.5rem;
@@ -232,7 +232,7 @@ h5,
 }
 h2,
 .h2 {
-  color: #c1272d;
+  color: #c12b09;
   font-family: 'Museo Slab', Georgia, Times, serif;
   line-height: 1.2;
   font-size: 48px;
@@ -303,21 +303,26 @@ ol li {
   padding-bottom: 0;
 }
 /* a {
-  color: #c1272d;
+  color: @strongRed;
   text-decoration: none;
 } */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-    color: #c1272d;
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #c12b09;
   text-decoration: none;
 }
 a:hover {
   color: #971e23;
 }
 .button {
-  background: #c1272d;
+  background: #c12b09;
   display: inline-block;
   color: #fcfcfc;
-  cursor:pointer;
+  cursor: pointer;
   text-align: center;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
@@ -336,9 +341,9 @@ a:hover {
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 #6c1619;
-  -moz-box-shadow: 0 3px 0 #6c1619;
-  box-shadow: 0 3px 0 #6c1619;
+  -webkit-box-shadow: 0 3px 0 #781b06;
+  -moz-box-shadow: 0 3px 0 #781b06;
+  box-shadow: 0 3px 0 #781b06;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -374,7 +379,7 @@ a:hover {
   color: #555555;
 }
 .bg-green {
-  background: #c5e2df;
+  background: #c6e6a8;
   color: #555555;
 }
 .bg-green h1,
@@ -382,7 +387,7 @@ a:hover {
   color: #555555;
 }
 .bg-red {
-  background: #c1272d;
+  background: #cd8863;
   color: #fcfcfc;
 }
 .bg-red h1,
@@ -390,7 +395,7 @@ a:hover {
   color: #fcfcfc;
 }
 .bg-blue {
-  background: #CAF093;
+  background: #b6d8da;
   color: #555555;
 }
 .bg-blue h1,
@@ -421,19 +426,19 @@ a:hover {
   padding-bottom: 2.04rem;
 }
 .box-color.bg-blue {
-  -webkit-box-shadow: 0 3px 0 #9bbcf9;
-  -moz-box-shadow: 0 3px 0 #9bbcf9;
-  box-shadow: 0 3px 0 #9bbcf9;
+  -webkit-box-shadow: 0 3px 0 #a5ced2;
+  -moz-box-shadow: 0 3px 0 #a5ced2;
+  box-shadow: 0 3px 0 #a5ced2;
 }
-.box-color.bg-yellow {
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+.box-color.bg-red {
+  -webkit-box-shadow: 0 3px 0 #d0776d;
+  -moz-box-shadow: 0 3px 0 #d0776d;
+  box-shadow: 0 3px 0 #d0776d;
 }
 .box-color.bg-green {
-  -webkit-box-shadow: 0 3px 0 #a3d1cc;
-  -moz-box-shadow: 0 3px 0 #a3d1cc;
-  box-shadow: 0 3px 0 #a3d1cc;
+  -webkit-box-shadow: 0 3px 0 #b9e094;
+  -moz-box-shadow: 0 3px 0 #b9e094;
+  box-shadow: 0 3px 0 #b9e094;
 }
 .box-border {
   *zoom: 1;
@@ -624,7 +629,7 @@ h6.meta a:before {
   }
   40% {
     -webkit-transform: translate(1px, -1px) rotate(1deg);
-  } 
+  }
   50% {
     -webkit-transform: translate(-1px, 2px) rotate(-1deg);
   }
@@ -733,7 +738,7 @@ h6.meta a:before {
   -moz-animation-duration: 15s;
 }
 #header {
-  background: #92CF59;
+  background: #92cf59;
   color: #555555;
   *zoom: 1;
   position: relative;
@@ -798,7 +803,7 @@ h6.meta a:before {
   width: auto;
   text-align: left;
   white-space: nowrap;
-  background: #fcc616;
+  background: #92cf59;
   margin-top: -5px;
   margin-top: -0.5rem;
   -webkit-border-radius: 0 0 15px 15px;
@@ -806,9 +811,9 @@ h6.meta a:before {
   -ms-border-radius: 0 0 15px 15px;
   -o-border-radius: 0 0 15px 15px;
   border-radius: 0 0 15px 15px;
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+  -webkit-box-shadow: 0 3px 0 #b9e094;
+  -moz-box-shadow: 0 3px 0 #b9e094;
+  box-shadow: 0 3px 0 #b9e094;
 }
 #header #nav ul li.parent ul li {
   display: block;
@@ -885,58 +890,53 @@ body.page-node #title {
   padding-bottom: 0 !important;
 }
 /* body field on blocks is required, so we will hide it when we don't need it */
-
-body.not-front #intro .content{
+body.not-front #intro .content {
   display: none;
 }
 /* but we want it to show up when we have things to put in it */
-.page-what-you-can-do #intro .content{
+.page-what-you-can-do #intro .content {
   display: block !important;
 }
-
-#banner{
+#banner {
   color: #555555;
   text-align: center;
 }
-#banner .content{
+#banner .content {
   text-align: center;
 }
-#banner, .taxonomy-trackography #banner, .taxonomy-alternatives #banner{
+#banner,
+.taxonomy-trackography #banner,
+.taxonomy-alternatives #banner {
   background: #c5e2df;
 }
-
 #intro {
-  background: #BFDBD7;
+  background: #b6d8da;
   color: #555555;
   text-align: center;
 }
 #intro h1,
-#intro .h1, #banner h1, #banner .h1 {
+#intro .h1,
+#banner h1,
+#banner .h1 {
   color: #555555;
 }
-#banner h1 {
-    text-shadow: 2px 1px 0 #fcfcfc;
-}
-#intro h1, {
-  text-shadow: 2px 1px 0 #fcfcfc;
+#intro h1 {
   padding-bottom: 0 !important;
 }
-#intro .img, {
+#intro .img {
   max-height: 180px;
   max-height: 18rem;
 }
-#banner .img{
+#banner .img {
   max-height: 300px;
   max-height: 30rem;
   margin-top: -100px;
 }
-#intro .content{
+#intro .content {
   text-align: center;
-  /* text-shadow: 1px 1px 0 #fcfcfc; */
 }
-
-body.page-node-711 #intro .content{
-  display:block;
+body.page-node-711 #intro .content {
+  display: block;
 }
 #content {
   padding: 20.4px 0;
@@ -953,7 +953,7 @@ body.page-node #content {
 #footer {
   background: #c5e2df;
   color: #555555;
-  border-bottom: 30px solid #fcc616;
+  border-bottom: 30px solid #92cf59;
 }
 #footer h1,
 #footer .h1 {
@@ -1061,12 +1061,10 @@ article .field-item blockquote blockquote:after {
 }
 @media (min-width: 767px) {
   article .entry-content img,
-  article .field-item img,
-  /*article .entry-content > blockquote,
-  article .field-item > blockquote*/ {
+  article .field-item img {
     max-width: 100%;
   }
- /* article .entry-content > blockquote,
+  /* article .entry-content > blockquote,
   article .field-item > blockquote {
     width: 100%;
   }*/
@@ -1076,32 +1074,29 @@ article .content .field-type-datetime,
 article .content .field-type-link-field {
   display: none;
 }
-article li p{
+article li p {
   padding-bottom: 0 !important;
 }
-article .title .col-sm-10{
+article .title .col-sm-10 {
   padding-bottom: 0 !important;
 }
-
 .sticky h1,
 .articlelist h1 {
   text-align: center;
 }
 .sticky .fields,
 .articlelist .fields {
-*zoom: 1;
-
-
+  *zoom: 1;
   /* border: 1px dashed #555555; */
-background: #fcfcfc;   
-color: #5e1c11;   
-position: relative;
-padding: 30px 15px;
-/*padding: 3rem 15px;   
+  background: #fcfcfc;
+  color: #5e1c11;
+  position: relative;
+  padding: 30px 15px;
+  /*padding: 3rem 15px;   
 padding: 30px 1.5rem;*/
-/*  padding: 3rem 15px;
-padding: 3rem 1.5rem; */  
-/*padding-bottom: 5px;
+  /*  padding: 3rem 15px;
+padding: 3rem 1.5rem; */
+  /*padding-bottom: 5px;
 padding-bottom: 0.5rem;*/
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1180,13 +1175,13 @@ padding-bottom: 0.5rem;*/
 }
 .sticky .fields.tool h6.type,
 .articlelist .fields.tool h6.type {
-  background: #fcc616;
+  background: #92cf59;
   color: #555555;
 }
 .sticky .fields.tool .image,
 .articlelist .fields.tool .image {
   background: #fcfcfc;
-  border: 3px solid #fcc616;
+  border: 3px solid #92cf59;
   padding: 15px;
   padding: 1.5rem;
   -webkit-border-radius: 50%;
@@ -1196,7 +1191,6 @@ padding-bottom: 0.5rem;*/
   border-radius: 50%;
 }
 .sticky {
-  background: #cbdcfc;
   color: #555555;
 }
 .sticky h1,
@@ -1218,7 +1212,7 @@ padding-bottom: 0.5rem;*/
   margin-left: 1.02rem;
 }
 .filter {
-  background: #fcc616;
+  background: #92cf59;
   color: #555555;
   padding: 15px 30px;
   padding: 1.5rem 30px;
@@ -1231,9 +1225,9 @@ padding-bottom: 0.5rem;*/
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border-radius: 15px;
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+  -webkit-box-shadow: 0 3px 0 #b9e094;
+  -moz-box-shadow: 0 3px 0 #b9e094;
+  box-shadow: 0 3px 0 #b9e094;
 }
 .filter h1,
 .filter .h1 {
@@ -1255,9 +1249,9 @@ padding-bottom: 0.5rem;*/
   box-shadow: 0 3px 0 #9bbcf9;
 }
 .filter.bg-yellow {
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+  -webkit-box-shadow: 0 3px 0 #b9e094;
+  -moz-box-shadow: 0 3px 0 #b9e094;
+  box-shadow: 0 3px 0 #b9e094;
 }
 .filter.bg-green {
   -webkit-box-shadow: 0 3px 0 #a3d1cc;
@@ -1374,53 +1368,45 @@ ul.linklist li a:before {
   width: 100%;
   background: url('../img/loading.gif') center no-repeat;
 }
-
-
-
-
 /*oooooooooooooooooooooooooooo*/
-
-.i18n-ar{
-  direction:rtl;
+.i18n-ar {
+  direction: rtl;
 }
-
 .button a {
-color: #fcfcfc;
-text-decoration: none;
+  color: #fcfcfc;
+  text-decoration: none;
 }
-
-
-.webform-grid .radio, .webform-grid .checkbox {
-    display: table-cell;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    min-height: 0px;
-    padding-left: 0px;
-    vertical-align: left;
+.webform-grid .radio,
+.webform-grid .checkbox {
+  display: table-cell;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  min-height: 0px;
+  padding-left: 0px;
+  vertical-align: left;
 }
-
-tr.odd {background-color:rgba(0,0,0,.1);}
-tr.even {background-color:rgba(255,255,255,.1);}
-
+tr.odd {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+tr.even {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .webform-component {
-    border-bottom: 1px solid #DDDDDD;
-    margin-top: 40px;
-    padding-bottom: 40px;
+  border-bottom: 1px solid #DDDDDD;
+  margin-top: 40px;
+  padding-bottom: 40px;
 }
-
-    label{
-      font-family:"museo slab";
-    }
-
-    label.option {
-            font-family:"museo sans";
-    display: inline;
-    font-weight: normal;
-    margin-bottom: 5px;
+label {
+  font-family: "museo slab";
 }
-
-.form-submit{
-background: #c1272d;
+label.option {
+  font-family: "museo sans";
+  display: inline;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+.form-submit {
+  background: #c12b09;
   display: inline-block;
   color: #fcfcfc;
   text-align: center;
@@ -1441,9 +1427,9 @@ background: #c1272d;
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 #6c1619;
-  -moz-box-shadow: 0 3px 0 #6c1619;
-  box-shadow: 0 3px 0 #6c1619;
+  -webkit-box-shadow: 0 3px 0 #781b06;
+  -moz-box-shadow: 0 3px 0 #781b06;
+  box-shadow: 0 3px 0 #781b06;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1456,172 +1442,141 @@ background: #c1272d;
   text-decoration: none;
   color: #fcfcfc;
 }
-
 textarea {
-    font-size: 1.1em;
-    font-weight: normal;
-    padding: 1em;
-    width: 140% !important;
+  font-size: 1.1em;
+  font-weight: normal;
+  padding: 1em;
+  width: 140% !important;
 }
-
-
-
 .form-item {
-    padding: .5em;
+  padding: .5em;
 }
-
 td {
-    padding: 1em;
+  padding: 1em;
 }
-
-.i18n-fr #nav, .i18n-es #nav, .i18n-ru #nav, .i18n-ur #nav, .i18n-ar #nav{
+.i18n-fr #nav,
+.i18n-es #nav,
+.i18n-ru #nav,
+.i18n-ur #nav,
+.i18n-ar #nav {
   display: none;
 }
-
-.content .field-name-body img{
-  margin-right:2em;
-  margin-bottom:2em;
+.content .field-name-body img {
+  margin-right: 2em;
+  margin-bottom: 2em;
   background-color: rgba(0, 0, 0, 0.4);
-    border: 5px solid #FFFFFF;
-    box-shadow: 1px 3px 10px 1px #DEDEDE, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset;
-    opacity: 0.9;
+  border: 5px solid #FFFFFF;
+  box-shadow: 1px 3px 10px 1px #DEDEDE, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset;
+  opacity: 0.9;
 }
-
 .content .field-name-field-mimg {
-    display: inline-block;
-    float: left;
-    margin-bottom: 2em;
-    margin-right: 2em;
-      background-color: rgba(0, 0, 0, 0.4);
-    border: 5px solid #FFFFFF;
-    box-shadow: 1px 3px 10px 1px #DEDEDE, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset;
-    opacity: 0.9;
+  display: inline-block;
+  float: left;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 5px solid #FFFFFF;
+  box-shadow: 1px 3px 10px 1px #DEDEDE, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset, 0 0 50px #F6F6F6 inset;
+  opacity: 0.9;
 }
-
 /* language switcher for front page */
-.langswitcher{
+.langswitcher {
   float: right;
   padding-right: 20px;
-  margin-top:-30px;
+  margin-top: -30px;
 }
-
 /* hide language option from flipcards */
-#node-696 .links, #node-697 .links, #node-698 .links, #node-408 .links{
+#node-696 .links,
+#node-697 .links,
+#node-698 .links,
+#node-408 .links {
   display: none;
 }
-
 /* hide language options from ononymous page*/
-
-.page-node-743 .links{
+.page-node-743 .links {
   display: none;
 }
-
 /* top logo & menu of thranslated pages */
-.translated a{
+.translated a {
   color: #fcfcfc !important;
-  text-shadow: 2px 1px 0 #555555;
   padding-bottom: 10px;
-
 }
-
-.translated a:hover{
+.translated a:hover {
   color: #555555 !important;
   text-decoration: none;
 }
-
-.translated h3{
-  text-shadow: 2px 1px 0 #fcfcfc;
-}
-
-.translated{
+.translated {
   padding-top: 20px;
 }
-
 /*timeline*/
-.page-timeline .date, .page-timeline .button{
+.page-timeline .date,
+.page-timeline .button {
   display: none;
 }
-
 /*what you can do*/
-
-.do-resources, .do-tools{
+.do-resources,
+.do-tools {
   padding-top: 20px !important;
-  margin-top:10px;
+  margin-top: 10px;
 }
-
 /* trackography */
-
-.page-trackography .articles .sticky{
+.page-trackography .articles .sticky {
   background-color: #fffdf6 !important;
 }
-
-.page-trackography .articles .fields{
+.page-trackography .articles .fields {
   background-color: #fcfcfc !important;
 }
-
-.page-trackography .view-header{
+.page-trackography .view-header {
   *zoom: 1;
-border: 1px dashed #555555;
-background: #fcfcfc;   
-color: #5e1c11;   
-position: relative;
-padding: 30px 15px;
-/*padding: 3rem 15px;   
+  border: 1px dashed #555555;
+  background: #fcfcfc;
+  color: #5e1c11;
+  position: relative;
+  padding: 30px 15px;
+  /*padding: 3rem 15px;   
 padding: 30px 1.5rem;*/
-/*  padding: 3rem 15px;
-padding: 3rem 1.5rem; */  
-/*padding-bottom: 5px;
+  /*  padding: 3rem 15px;
+padding: 3rem 1.5rem; */
+  /*padding-bottom: 5px;
 padding-bottom: 0.5rem;*/
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-
 }
 /* for mobile view of blogs and other text pieces (tools / tips / resources / baisc pages)*/
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-
-article p{
-  font-size: 3rem !important;
-
-}
-
-article h3{
-  font-size: 50px !important;
-}
-
-.node-type-content #main .col-sm-10, .node-type-page #main .col-sm-10, .node-type-tool-or-tip #main .col-sm-10, .node-type-external-resource #main .col-sm-10{
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 5px 0 !important;
-}
-
-.node-type-content #main p, .node-type-page #main p, .node-type-tool-or-tip #main p, .node-type-external-resource #main p{
-  padding-bottom: 40px !important;
-}
-
-
-
-
-.node-type-content #title h1, .node-type-page #title h1, .node-type-tool-or-tip #title h1, .node-type-external-resource #title h1{
-  font-size: 60px !important;
-}
-
-
-.node-type-content #main .col-sm-2, .node-type-page #main .col-sm-2, .node-type-tool-or-tip #main .col-sm-2, .node-type-external-resource #main .col-sm-2{
-            display: none !important;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  article p {
+    font-size: 3rem !important;
   }
-
-
-}
-
-#header {
-<<<<<<< HEAD
-  /*background-color: green !important;*/
-=======
-  background-color: blue !important;
->>>>>>> be4f21f2e2220522c3dd425bc26560615c056599
+  article h3 {
+    font-size: 50px !important;
+  }
+  .node-type-content #main .col-sm-10,
+  .node-type-page #main .col-sm-10,
+  .node-type-tool-or-tip #main .col-sm-10,
+  .node-type-external-resource #main .col-sm-10 {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 5px 0 !important;
+  }
+  .node-type-content #main p,
+  .node-type-page #main p,
+  .node-type-tool-or-tip #main p,
+  .node-type-external-resource #main p {
+    padding-bottom: 40px !important;
+  }
+  .node-type-content #title h1,
+  .node-type-page #title h1,
+  .node-type-tool-or-tip #title h1,
+  .node-type-external-resource #title h1 {
+    font-size: 60px !important;
+  }
+  .node-type-content #main .col-sm-2,
+  .node-type-page #main .col-sm-2,
+  .node-type-tool-or-tip #main .col-sm-2,
+  .node-type-external-resource #main .col-sm-2 {
+    display: none !important;
+  }
 }

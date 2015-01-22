@@ -1,0 +1,34 @@
+{
+  "name": "monument",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "commander": "^2.5.0",
+    "cookie-parser": "^1.3.2",
+    "debug": "^2.0.0",
+    "dynasty": "^0.1.1",
+    "eventemitter2": "^0.4.14",
+    "express": "^4.4.5",
+    "express-session": "^1.9.2",
+    "jade": "^1.3.1",
+    "morgan": "^1.1.1",
+    "promised-mongo": "ponychicken/promised-mongo",
+    "serve-favicon": "^2.0.1",
+    "shortid": "^2.1.3",
+    "slug": "^0.8.0",
+    "socket.io": "^1.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-cached": "^1.0.1",
+    "gulp-es6-transpiler": "^1.0.1",
+    "gulp-less": "^2.0.0",
+    "gulp-livereload": "^3.0.0",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-shell": "^0.2.10"
+  }
+}

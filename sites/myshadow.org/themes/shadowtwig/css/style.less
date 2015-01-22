@@ -1,8 +1,27 @@
+@strongGreen: #92CF59;
+@strongBlue: #72B3B8;
+@strongRed: #C12B09;
+
+
 @green: #92CF59;
 @blue: #72B3B8;
-@red: #D67F60;
+//@red: spin(#D67F60;
+@red: desaturate(lighten(spin(@strongRed, -5), 7.5), 40%);
 
-@lightBlue: lighten(@blue, 30%);
+
+
+
+@lightBlue: lighten(@blue, 20%);
+@lightGreen: lighten(@green, 20%);
+@lightRed: desaturate(lighten(spin(@strongRed, 10), 20), 40%);
+
+@shadowBlue: lighten(@blue, 15%);
+@shadowGreen: lighten(@green, 15%);
+@shadowRed: lighten(@red, 15%);
+
+@shadowBlueStrong: darken(@strongGreen, 15%);
+@shadowGreenStrong: darken(@strongBlue, 15%);
+@shadowRedStrong: darken(@strongRed, 15%);
 
 /*
  * Web Fonts from fontspring.com
@@ -187,7 +206,7 @@ h1,
 	    Unfortunately I don't think this is doing anything, since fontspring fonts have opentype features disabled.
 	    See here: http://www.fontspring.com/support/general/difference-between-desktop-font-and-webfont
     */
-  color: #c1272d;
+  color: @strongRed;
   line-height: 1;
   font-size: 45px;
   font-size: 4.5rem;
@@ -238,7 +257,7 @@ h5,
 }
 h2,
 .h2 {
-  color: #c1272d;
+  color: @strongRed;
   font-family: 'Museo Slab', Georgia, Times, serif;
   line-height: 1.2;
   font-size: 48px;
@@ -309,18 +328,18 @@ ol li {
   padding-bottom: 0;
 }
 /* a {
-  color: #c1272d;
+  color: @strongRed;
   text-decoration: none;
 } */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-    color: #c1272d;
+    color: @strongRed;
   text-decoration: none;
 }
 a:hover {
   color: #971e23;
 }
 .button {
-  background: #c1272d;
+  background: @strongRed;
   display: inline-block;
   color: #fcfcfc;
   cursor:pointer;
@@ -342,9 +361,9 @@ a:hover {
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 #6c1619;
-  -moz-box-shadow: 0 3px 0 #6c1619;
-  box-shadow: 0 3px 0 #6c1619;
+  -webkit-box-shadow: 0 3px 0 @shadowRedStrong;
+  -moz-box-shadow: 0 3px 0 @shadowRedStrong;
+  box-shadow: 0 3px 0 @shadowRedStrong;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -380,7 +399,7 @@ a:hover {
   color: #555555;
 }
 .bg-green {
-  background: #c5e2df;
+  background: @lightGreen;
   color: #555555;
 }
 .bg-green h1,
@@ -388,7 +407,7 @@ a:hover {
   color: #555555;
 }
 .bg-red {
-  background: #c1272d;
+  background: @lightRed;
   color: #fcfcfc;
 }
 .bg-red h1,
@@ -396,7 +415,7 @@ a:hover {
   color: #fcfcfc;
 }
 .bg-blue {
-  background: #CAF093;
+  background: @lightBlue;
   color: #555555;
 }
 .bg-blue h1,
@@ -427,19 +446,19 @@ a:hover {
   padding-bottom: 2.04rem;
 }
 .box-color.bg-blue {
-  -webkit-box-shadow: 0 3px 0 #9bbcf9;
-  -moz-box-shadow: 0 3px 0 #9bbcf9;
-  box-shadow: 0 3px 0 #9bbcf9;
+  -webkit-box-shadow: 0 3px 0 @shadowBlue;
+  -moz-box-shadow: 0 3px 0 @shadowBlue;
+  box-shadow: 0 3px 0 @shadowBlue;
 }
-.box-color.bg-yellow {
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+.box-color.bg-red {
+  -webkit-box-shadow: 0 3px 0 @shadowRed;
+  -moz-box-shadow: 0 3px 0 @shadowRed;
+  box-shadow: 0 3px 0 @shadowRed;
 }
 .box-color.bg-green {
-  -webkit-box-shadow: 0 3px 0 #a3d1cc;
-  -moz-box-shadow: 0 3px 0 #a3d1cc;
-  box-shadow: 0 3px 0 #a3d1cc;
+  -webkit-box-shadow: 0 3px 0 @shadowGreen;
+  -moz-box-shadow: 0 3px 0 @shadowGreen;
+  box-shadow: 0 3px 0 @shadowGreen;
 }
 .box-border {
   *zoom: 1;
@@ -804,7 +823,7 @@ h6.meta a:before {
   width: auto;
   text-align: left;
   white-space: nowrap;
-  background: #fcc616;
+  background: @green;
   margin-top: -5px;
   margin-top: -0.5rem;
   -webkit-border-radius: 0 0 15px 15px;
@@ -812,9 +831,9 @@ h6.meta a:before {
   -ms-border-radius: 0 0 15px 15px;
   -o-border-radius: 0 0 15px 15px;
   border-radius: 0 0 15px 15px;
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+  -webkit-box-shadow: 0 3px 0 @shadowGreen;
+  -moz-box-shadow: 0 3px 0 @shadowGreen;
+  box-shadow: 0 3px 0 @shadowGreen;
 }
 #header #nav ul li.parent ul li {
   display: block;
@@ -921,10 +940,8 @@ body.not-front #intro .content{
   color: #555555;
 }
 #banner h1 {
-    text-shadow: 2px 1px 0 #fcfcfc;
 }
 #intro h1, {
-  text-shadow: 2px 1px 0 #fcfcfc;
   padding-bottom: 0 !important;
 }
 #intro .img, {
@@ -938,7 +955,6 @@ body.not-front #intro .content{
 }
 #intro .content{
   text-align: center;
-  /* text-shadow: 1px 1px 0 #fcfcfc; */
 }
 
 body.page-node-711 #intro .content{
@@ -959,7 +975,7 @@ body.page-node #content {
 #footer {
   background: #c5e2df;
   color: #555555;
-  border-bottom: 30px solid #fcc616;
+  border-bottom: 30px solid @green;
 }
 #footer h1,
 #footer .h1 {
@@ -1186,13 +1202,13 @@ padding-bottom: 0.5rem;*/
 }
 .sticky .fields.tool h6.type,
 .articlelist .fields.tool h6.type {
-  background: #fcc616;
+  background: @green;
   color: #555555;
 }
 .sticky .fields.tool .image,
 .articlelist .fields.tool .image {
   background: #fcfcfc;
-  border: 3px solid #fcc616;
+  border: 3px solid @green;
   padding: 15px;
   padding: 1.5rem;
   -webkit-border-radius: 50%;
@@ -1202,7 +1218,6 @@ padding-bottom: 0.5rem;*/
   border-radius: 50%;
 }
 .sticky {
-  background: #cbdcfc;
   color: #555555;
 }
 .sticky h1,
@@ -1224,7 +1239,7 @@ padding-bottom: 0.5rem;*/
   margin-left: 1.02rem;
 }
 .filter {
-  background: #fcc616;
+  background: @green;
   color: #555555;
   padding: 15px 30px;
   padding: 1.5rem 30px;
@@ -1237,9 +1252,9 @@ padding-bottom: 0.5rem;*/
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border-radius: 15px;
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+  -webkit-box-shadow: 0 3px 0 @shadowGreen;
+  -moz-box-shadow: 0 3px 0 @shadowGreen;
+  box-shadow: 0 3px 0 @shadowGreen;
 }
 .filter h1,
 .filter .h1 {
@@ -1261,9 +1276,9 @@ padding-bottom: 0.5rem;*/
   box-shadow: 0 3px 0 #9bbcf9;
 }
 .filter.bg-yellow {
-  -webkit-box-shadow: 0 3px 0 #dca903;
-  -moz-box-shadow: 0 3px 0 #dca903;
-  box-shadow: 0 3px 0 #dca903;
+  -webkit-box-shadow: 0 3px 0 @shadowGreen;
+  -moz-box-shadow: 0 3px 0 @shadowGreen;
+  box-shadow: 0 3px 0 @shadowGreen;
 }
 .filter.bg-green {
   -webkit-box-shadow: 0 3px 0 #a3d1cc;
@@ -1426,7 +1441,7 @@ tr.even {background-color:rgba(255,255,255,.1);}
 }
 
 .form-submit{
-background: #c1272d;
+background: @strongRed;
   display: inline-block;
   color: #fcfcfc;
   text-align: center;
@@ -1447,9 +1462,9 @@ background: #c1272d;
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 #6c1619;
-  -moz-box-shadow: 0 3px 0 #6c1619;
-  box-shadow: 0 3px 0 #6c1619;
+  -webkit-box-shadow: 0 3px 0 @shadowRedStrong;
+  -moz-box-shadow: 0 3px 0 @shadowRedStrong;
+  box-shadow: 0 3px 0 @shadowRedStrong;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1525,7 +1540,6 @@ td {
 /* top logo & menu of thranslated pages */
 .translated a{
   color: #fcfcfc !important;
-  text-shadow: 2px 1px 0 #555555;
   padding-bottom: 10px;
 
 }
@@ -1536,7 +1550,6 @@ td {
 }
 
 .translated h3{
-  text-shadow: 2px 1px 0 #fcfcfc;
 }
 
 .translated{
@@ -1622,12 +1635,4 @@ article h3{
   }
 
 
-}
-
-#header {
-<<<<<<< HEAD
-  /*background-color: green !important;*/
-=======
-  background-color: blue !important;
->>>>>>> be4f21f2e2220522c3dd425bc26560615c056599
 }
