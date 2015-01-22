@@ -1,3 +1,9 @@
+@green: #92CF59;
+@blue: #72B3B8;
+@red: #D67F60;
+
+@lightBlue: lighten(@blue, 30%);
+
 /*
  * Web Fonts from fontspring.com
  *
@@ -733,7 +739,7 @@ h6.meta a:before {
   -moz-animation-duration: 15s;
 }
 #header {
-  background: #92CF59;
+  background: @green;
   color: #555555;
   *zoom: 1;
   position: relative;
@@ -906,7 +912,7 @@ body.not-front #intro .content{
 }
 
 #intro {
-  background: #BFDBD7;
+  background: @lightBlue; 
   color: #555555;
   text-align: center;
 }
