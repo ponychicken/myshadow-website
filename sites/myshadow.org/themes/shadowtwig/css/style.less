@@ -1,27 +1,35 @@
-@strongGreen: #92CF59;
-@strongBlue: #72B3B8;
+@strongGreen: #4E9919;
+@strongBlue: #0C637D;
 @strongRed: #C12B09;
-
+@paper: #FFFAF9;
 
 @green: #92CF59;
 @blue: #72B3B8;
 //@red: spin(#D67F60;
 @red: desaturate(lighten(spin(@strongRed, -5), 7.5), 40%);
 
- 
+@grey: #333036;
+@darkGrey: darken(@grey, 15);
+@lightGrey: lighten(@grey, 15);
 
-
-@lightBlue: lighten(@blue, 20%);
+@lightBlue:  desaturate(lighten(spin(@strongBlue, -10), 50), 45%);
 @lightGreen: lighten(@green, 20%);
-@lightRed: desaturate(lighten(spin(@strongRed, 10), 37), 32%);
+@lightRed:   desaturate(lighten(spin(@strongRed, 10), 37), 32%);
 
 @shadowBlue: lighten(@blue, 15%);
 @shadowGreen: lighten(@green, 15%);
 @shadowRed: lighten(@red, 15%);
 
-@shadowBlueStrong: darken(@strongGreen, 15%);
-@shadowGreenStrong: darken(@strongBlue, 15%);
+@shadowBlueStrong: darken(@strongBlue, 15%);
+@shadowGreenStrong: darken(@strongGreen, 10%);
 @shadowRedStrong: darken(@strongRed, 15%);
+
+
+a {
+  color: @strongBlue;
+  
+  
+}
 
 /*
  * Web Fonts from fontspring.com
@@ -190,8 +198,8 @@
 }
 */
 body {
-  background: #fffdf6;
-  color: #5e1c11;
+  background: @paper;
+  color: @darkGrey;
   font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1,
@@ -336,14 +344,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
   text-decoration: none;
 }
 a:hover {
-  color: #971e23;
+  color: @shadowRedStrong;
 }
 .button {
   background: @strongRed;
   display: inline-block;
-  color: #fcfcfc;
+  color: @paper;
   cursor:pointer;
   text-align: center;
+  letter-spacing: 2px;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -374,7 +383,7 @@ a:hover {
 .button:hover {
   background: #971e23;
   text-decoration: none;
-  color: #fcfcfc;
+  color: @paper;
 }
 .center {
   text-align: center;
@@ -392,35 +401,35 @@ a:hover {
 }
 .bg-yellow {
   background: #BFDBD7;
-  color: #555555;
+  color: @grey;
 }
 .bg-yellow h1,
 .bg-yellow .h1 {
-  color: #555555;
+  color: @grey;
 }
 .bg-green {
   background: @lightGreen;
-  color: #555555;
+  color: @grey;
 }
 .bg-green h1,
 .bg-green .h1 {
-  color: #555555;
+  color: @grey;
 }
 .bg-red {
   background: @lightRed;
-  color: #fcfcfc;
+  color: @grey;
 }
 .bg-red h1,
 .bg-red .h1 {
-  color: #fcfcfc;
+  color: @grey;
 }
 .bg-blue {
   background: @lightBlue;
-  color: #555555;
+  color: @grey;
 }
 .bg-blue h1,
 .bg-blue .h1 {
-  color: #555555;
+  color: @grey;
 }
 .box-color {
   padding: 15px 30px;
@@ -429,10 +438,10 @@ a:hover {
   padding: 1.5rem 3rem;
   padding-bottom: 5px;
   padding-bottom: 0.5rem;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
 }
 .box-color h3 {
@@ -462,9 +471,9 @@ a:hover {
 }
 .box-border {
   *zoom: 1;
-  border: 1px dashed #555555;
-  background: #fcfcfc;
-  color: #5e1c11;
+  border: 1px dashed @grey;
+  background: @paper;
+  color: @darkGrey;
   position: relative;
   padding: 30px 15px;
   padding: 3rem 15px;
@@ -539,8 +548,8 @@ a:hover {
   text-align: center;
 }
 h6.type {
-  color: #fcfcfc;
-  background: #555555;
+  color: @paper;
+  background: @strongRed;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -561,14 +570,14 @@ h6.type {
   padding: 5px 20px;
 }
 h6.type a {
-  color: #fcfcfc;
+  color: @paper;
 }
 h6.meta {
   background: #fffdf6;
   display: inline-block;
   white-space: nowrap;
   text-align: right;
-  border: 1px dashed #555555;
+  border: 1px dashed @grey;
   line-height: 1.5;
   font-size: 10px;
   font-size: 1rem;
@@ -759,14 +768,14 @@ h6.meta a:before {
 }
 #header {
   background: @green;
-  color: #555555;
+  color: @grey;
   *zoom: 1;
   position: relative;
   z-index: 5;
 }
 #header h1,
 #header .h1 {
-  color: #555555;
+  color: @grey;
 }
 #header:before,
 #header:after {
@@ -801,6 +810,7 @@ h6.meta a:before {
   line-height: 1.5;
   font-size: 30px;
   font-size: 3rem;
+  letter-spacing: 0.05rem;
   padding-bottom: 0;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -826,14 +836,14 @@ h6.meta a:before {
   background: @green;
   margin-top: -5px;
   margin-top: -0.5rem;
-  -webkit-border-radius: 0 0 15px 15px;
-  -moz-border-radius: 0 0 15px 15px;
-  -ms-border-radius: 0 0 15px 15px;
-  -o-border-radius: 0 0 15px 15px;
-  border-radius: 0 0 15px 15px;
-  -webkit-box-shadow: 0 3px 0 @shadowGreen;
-  -moz-box-shadow: 0 3px 0 @shadowGreen;
-  box-shadow: 0 3px 0 @shadowGreen;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: 0 3px 0 @shadowGreenStrong;
+  -moz-box-shadow: 0 3px 0 @shadowGreenStrong;
+  box-shadow: 0 3px 0 @shadowGreenStrong;
 }
 #header #nav ul li.parent ul li {
   display: block;
@@ -854,7 +864,7 @@ h6.meta a:before {
   }
   #header #nav ul li.parent > a:after {
     content: "▼";
-    color: #5e1c11;
+    color: @darkGrey;
     vertical-align: middle;
     text-decoration: none !important;
     font-size: 15px;
@@ -866,11 +876,11 @@ h6.meta a:before {
     color: #b43621;
   }
   #header #nav ul li.parent > a.active:after {
-    color: #fcfcfc;
+    color: @paper;
   }
 }
 #header #nav ul li a {
-  color: #5e1c11;
+  color: @darkGrey;
   text-decoration: none;
   display: inline-block;
   padding: 15px;
@@ -880,7 +890,7 @@ h6.meta a:before {
   color: #892919;
 }
 #header #nav ul li a.active {
-  color: #fcfcfc;
+  color: @paper;
 }
 #main > div,
 #main > article,
@@ -888,12 +898,12 @@ h6.meta a:before {
 #main > footer {
   padding: 40.8px 0;
   padding: 4.08rem 0;
-  /* border-top: 3px solid #fcfcfc; */
+  /* border-top: 3px solid @paper; */
 }
 #breadcrumb {
   padding-top: 20.4px;
   padding-top: 2.04rem;
-  border-top: 3px solid #fcfcfc;
+  border-top: 3px solid @paper;
 }
 #title {
   padding-bottom: 0 !important;
@@ -901,7 +911,7 @@ h6.meta a:before {
   padding-top: 2.04rem !important;
 }
 body.page-node #title {
-  background: #fcfcfc;
+  background: @paper;
 }
 #breadcrumb + #title {
   border-top: none;
@@ -920,7 +930,7 @@ body.not-front #intro .content{
 }
 
 #banner{
-  color: #555555;
+  color: @grey;
   text-align: center;
 }
 #banner .content{
@@ -932,12 +942,12 @@ body.not-front #intro .content{
 
 #intro {
   background: @lightBlue; 
-  color: #555555;
+  color: @grey;
   text-align: center;
 }
 #intro h1,
 #intro .h1, #banner h1, #banner .h1 {
-  color: #555555;
+  color: @grey;
 }
 #banner h1 {
 }
@@ -965,7 +975,7 @@ body.page-node-711 #intro .content{
   padding: 2.04rem 0;
 }
 body.page-node #content {
-  background: #fcfcfc;
+  background: @paper;
 }
 #breadcrumb + #content,
 #title + #content {
@@ -974,12 +984,12 @@ body.page-node #content {
 }
 #footer {
   background: #c5e2df;
-  color: #555555;
+  color: @grey;
   border-bottom: 30px solid @green;
 }
 #footer h1,
 #footer .h1 {
-  color: #555555;
+  color: @grey;
 }
 #footer .logo {
   margin-top: 15px;
@@ -1014,9 +1024,9 @@ article .entry-content blockquote,
 article .field-item blockquote {
   position: relative;
   display: inline-block !important;
-  background: #fcfcfc;
-  color: #555555;
-  border: 1px dashed #555555;
+  background: @paper;
+  color: @grey;
+  border: 1px dashed @grey;
   font-weight: normal;
   margin-bottom: 20.4px;
   margin-bottom: 2.04rem;
@@ -1114,9 +1124,8 @@ article .title .col-sm-10{
 *zoom: 1;
 
 
-  /* border: 1px dashed #555555; */
-background: #fcfcfc;   
-color: #5e1c11;   
+  /* border: 1px dashed @grey; */
+color: @darkGrey;   
 position: relative;
 padding: 30px 15px;
 /*padding: 3rem 15px;   
@@ -1202,12 +1211,11 @@ padding-bottom: 0.5rem;*/
 }
 .sticky .fields.tool h6.type,
 .articlelist .fields.tool h6.type {
-  background: @green;
-  color: #555555;
+  background: @strongGreen;
+  color: @grey;
 }
 .sticky .fields.tool .image,
 .articlelist .fields.tool .image {
-  background: #fcfcfc;
   border: 3px solid @green;
   padding: 15px;
   padding: 1.5rem;
@@ -1218,11 +1226,11 @@ padding-bottom: 0.5rem;*/
   border-radius: 50%;
 }
 .sticky {
-  color: #555555;
+  color: @grey;
 }
 .sticky h1,
 .sticky .h1 {
-  color: #555555;
+  color: @grey;
 }
 .articlelist h3 + .view {
   padding-top: 20.4px;
@@ -1240,7 +1248,7 @@ padding-bottom: 0.5rem;*/
 }
 .filter {
   background: @green;
-  color: #555555;
+  color: @grey;
   padding: 15px 30px;
   padding: 1.5rem 30px;
   padding: 15px 3rem;
@@ -1258,7 +1266,7 @@ padding-bottom: 0.5rem;*/
 }
 .filter h1,
 .filter .h1 {
-  color: #555555;
+  color: @grey;
 }
 .filter h3 {
   font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1291,14 +1299,14 @@ padding-bottom: 0.5rem;*/
   font-size: 2.4rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
-  color: #5e1c11;
+  color: @darkGrey;
 }
 .filter ul {
   list-style: none;
   padding-left: 0;
 }
 .filter ul li a.active {
-  color: #fcfcfc;
+  color: @paper;
   background: #971e23;
 }
 .filter ul li a:before {
@@ -1310,7 +1318,7 @@ padding-bottom: 0.5rem;*/
   font-size: 2.4rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
-  color: #5e1c11;
+  color: @darkGrey;
 }
 .topics ul {
   padding-left: 0;
@@ -1327,7 +1335,7 @@ padding-bottom: 0.5rem;*/
 .topics ul li a,
 .topics .field-item a {
   background: #a3d1cc;
-  color: #5e1c11;
+  color: @darkGrey;
   padding: 3px;
   padding: 0.3rem;
   -webkit-border-radius: 3px;
@@ -1357,7 +1365,7 @@ padding-bottom: 0.5rem;*/
   padding-bottom: 2.04rem;
 }
 .relevant {
-  border-top: 1px solid #5e1c11;
+  border-top: 1px solid @darkGrey;
   padding-top: 10.2px;
   padding-top: 1.02rem;
   margin-top: 20.4px;
@@ -1406,7 +1414,7 @@ ul.linklist li a:before {
 }
 
 .button a {
-color: #fcfcfc;
+color: @paper;
 text-decoration: none;
 }
 
@@ -1443,7 +1451,7 @@ tr.even {background-color:rgba(255,255,255,.1);}
 .form-submit{
 background: @strongRed;
   display: inline-block;
-  color: #fcfcfc;
+  color: @paper;
   text-align: center;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
@@ -1475,7 +1483,7 @@ background: @strongRed;
 .form-submit:hover {
   background: #971e23;
   text-decoration: none;
-  color: #fcfcfc;
+  color: @paper;
 }
 
 textarea {
@@ -1539,13 +1547,13 @@ td {
 
 /* top logo & menu of thranslated pages */
 .translated a{
-  color: #fcfcfc !important;
+  color: @paper !important;
   padding-bottom: 10px;
 
 }
 
 .translated a:hover{
-  color: #555555 !important;
+  color: @grey !important;
   text-decoration: none;
 }
 
@@ -1575,14 +1583,14 @@ td {
 }
 
 .page-trackography .articles .fields{
-  background-color: #fcfcfc !important;
+  background-color: @paper !important;
 }
 
 .page-trackography .view-header{
   *zoom: 1;
-border: 1px dashed #555555;
-background: #fcfcfc;   
-color: #5e1c11;   
+border: 1px dashed @grey;
+background: @paper;   
+color: @darkGrey;   
 position: relative;
 padding: 30px 15px;
 /*padding: 3rem 15px;   

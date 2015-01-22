@@ -1,3 +1,6 @@
+a {
+  color: #0c637d;
+}
 /*
  * Web Fonts from fontspring.com
  *
@@ -165,8 +168,8 @@
 }
 */
 body {
-  background: #fffdf6;
-  color: #5e1c11;
+  background: #fffaf9;
+  color: #0d0c0e;
   font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1,
@@ -316,14 +319,15 @@ h6 a {
   text-decoration: none;
 }
 a:hover {
-  color: #971e23;
+  color: #781b06;
 }
 .button {
   background: #c12b09;
   display: inline-block;
-  color: #fcfcfc;
+  color: #fffaf9;
   cursor: pointer;
   text-align: center;
+  letter-spacing: 2px;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -354,7 +358,7 @@ a:hover {
 .button:hover {
   background: #971e23;
   text-decoration: none;
-  color: #fcfcfc;
+  color: #fffaf9;
 }
 .center {
   text-align: center;
@@ -372,35 +376,35 @@ a:hover {
 }
 .bg-yellow {
   background: #BFDBD7;
-  color: #555555;
+  color: #333036;
 }
 .bg-yellow h1,
 .bg-yellow .h1 {
-  color: #555555;
+  color: #333036;
 }
 .bg-green {
   background: #c6e6a8;
-  color: #555555;
+  color: #333036;
 }
 .bg-green h1,
 .bg-green .h1 {
-  color: #555555;
+  color: #333036;
 }
 .bg-red {
   background: #e7b9a0;
-  color: #fcfcfc;
+  color: #333036;
 }
 .bg-red h1,
 .bg-red .h1 {
-  color: #fcfcfc;
+  color: #333036;
 }
 .bg-blue {
-  background: #b6d8da;
-  color: #555555;
+  background: #aed7da;
+  color: #333036;
 }
 .bg-blue h1,
 .bg-blue .h1 {
-  color: #555555;
+  color: #333036;
 }
 .box-color {
   padding: 15px 30px;
@@ -409,10 +413,10 @@ a:hover {
   padding: 1.5rem 3rem;
   padding-bottom: 5px;
   padding-bottom: 0.5rem;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
 }
 .box-color h3 {
@@ -442,9 +446,9 @@ a:hover {
 }
 .box-border {
   *zoom: 1;
-  border: 1px dashed #555555;
-  background: #fcfcfc;
-  color: #5e1c11;
+  border: 1px dashed #333036;
+  background: #fffaf9;
+  color: #0d0c0e;
   position: relative;
   padding: 30px 15px;
   padding: 3rem 15px;
@@ -519,8 +523,8 @@ a:hover {
   text-align: center;
 }
 h6.type {
-  color: #fcfcfc;
-  background: #555555;
+  color: #fffaf9;
+  background: #c12b09;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -541,14 +545,14 @@ h6.type {
   padding: 5px 20px;
 }
 h6.type a {
-  color: #fcfcfc;
+  color: #fffaf9;
 }
 h6.meta {
   background: #fffdf6;
   display: inline-block;
   white-space: nowrap;
   text-align: right;
-  border: 1px dashed #555555;
+  border: 1px dashed #333036;
   line-height: 1.5;
   font-size: 10px;
   font-size: 1rem;
@@ -739,14 +743,14 @@ h6.meta a:before {
 }
 #header {
   background: #92cf59;
-  color: #555555;
+  color: #333036;
   *zoom: 1;
   position: relative;
   z-index: 5;
 }
 #header h1,
 #header .h1 {
-  color: #555555;
+  color: #333036;
 }
 #header:before,
 #header:after {
@@ -781,6 +785,7 @@ h6.meta a:before {
   line-height: 1.5;
   font-size: 30px;
   font-size: 3rem;
+  letter-spacing: 0.05rem;
   padding-bottom: 0;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -806,14 +811,14 @@ h6.meta a:before {
   background: #92cf59;
   margin-top: -5px;
   margin-top: -0.5rem;
-  -webkit-border-radius: 0 0 15px 15px;
-  -moz-border-radius: 0 0 15px 15px;
-  -ms-border-radius: 0 0 15px 15px;
-  -o-border-radius: 0 0 15px 15px;
-  border-radius: 0 0 15px 15px;
-  -webkit-box-shadow: 0 3px 0 #b9e094;
-  -moz-box-shadow: 0 3px 0 #b9e094;
-  box-shadow: 0 3px 0 #b9e094;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  -ms-border-radius: 0 0 5px 5px;
+  -o-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: 0 3px 0 #386d12;
+  -moz-box-shadow: 0 3px 0 #386d12;
+  box-shadow: 0 3px 0 #386d12;
 }
 #header #nav ul li.parent ul li {
   display: block;
@@ -834,7 +839,7 @@ h6.meta a:before {
   }
   #header #nav ul li.parent > a:after {
     content: "▼";
-    color: #5e1c11;
+    color: #0d0c0e;
     vertical-align: middle;
     text-decoration: none !important;
     font-size: 15px;
@@ -846,11 +851,11 @@ h6.meta a:before {
     color: #b43621;
   }
   #header #nav ul li.parent > a.active:after {
-    color: #fcfcfc;
+    color: #fffaf9;
   }
 }
 #header #nav ul li a {
-  color: #5e1c11;
+  color: #0d0c0e;
   text-decoration: none;
   display: inline-block;
   padding: 15px;
@@ -860,7 +865,7 @@ h6.meta a:before {
   color: #892919;
 }
 #header #nav ul li a.active {
-  color: #fcfcfc;
+  color: #fffaf9;
 }
 #main > div,
 #main > article,
@@ -868,12 +873,12 @@ h6.meta a:before {
 #main > footer {
   padding: 40.8px 0;
   padding: 4.08rem 0;
-  /* border-top: 3px solid #fcfcfc; */
+  /* border-top: 3px solid @paper; */
 }
 #breadcrumb {
   padding-top: 20.4px;
   padding-top: 2.04rem;
-  border-top: 3px solid #fcfcfc;
+  border-top: 3px solid #fffaf9;
 }
 #title {
   padding-bottom: 0 !important;
@@ -881,7 +886,7 @@ h6.meta a:before {
   padding-top: 2.04rem !important;
 }
 body.page-node #title {
-  background: #fcfcfc;
+  background: #fffaf9;
 }
 #breadcrumb + #title {
   border-top: none;
@@ -898,7 +903,7 @@ body.not-front #intro .content {
   display: block !important;
 }
 #banner {
-  color: #555555;
+  color: #333036;
   text-align: center;
 }
 #banner .content {
@@ -910,15 +915,15 @@ body.not-front #intro .content {
   background: #c5e2df;
 }
 #intro {
-  background: #b6d8da;
-  color: #555555;
+  background: #aed7da;
+  color: #333036;
   text-align: center;
 }
 #intro h1,
 #intro .h1,
 #banner h1,
 #banner .h1 {
-  color: #555555;
+  color: #333036;
 }
 #intro h1 {
   padding-bottom: 0 !important;
@@ -943,7 +948,7 @@ body.page-node-711 #intro .content {
   padding: 2.04rem 0;
 }
 body.page-node #content {
-  background: #fcfcfc;
+  background: #fffaf9;
 }
 #breadcrumb + #content,
 #title + #content {
@@ -952,12 +957,12 @@ body.page-node #content {
 }
 #footer {
   background: #c5e2df;
-  color: #555555;
+  color: #333036;
   border-bottom: 30px solid #92cf59;
 }
 #footer h1,
 #footer .h1 {
-  color: #555555;
+  color: #333036;
 }
 #footer .logo {
   margin-top: 15px;
@@ -992,9 +997,9 @@ article .entry-content blockquote,
 article .field-item blockquote {
   position: relative;
   display: inline-block !important;
-  background: #fcfcfc;
-  color: #555555;
-  border: 1px dashed #555555;
+  background: #fffaf9;
+  color: #333036;
+  border: 1px dashed #333036;
   font-weight: normal;
   margin-bottom: 20.4px;
   margin-bottom: 2.04rem;
@@ -1087,9 +1092,8 @@ article .title .col-sm-10 {
 .sticky .fields,
 .articlelist .fields {
   *zoom: 1;
-  /* border: 1px dashed #555555; */
-  background: #fcfcfc;
-  color: #5e1c11;
+  /* border: 1px dashed @grey; */
+  color: #0d0c0e;
   position: relative;
   padding: 30px 15px;
   /*padding: 3rem 15px;   
@@ -1175,12 +1179,11 @@ padding-bottom: 0.5rem;*/
 }
 .sticky .fields.tool h6.type,
 .articlelist .fields.tool h6.type {
-  background: #92cf59;
-  color: #555555;
+  background: #4e9919;
+  color: #333036;
 }
 .sticky .fields.tool .image,
 .articlelist .fields.tool .image {
-  background: #fcfcfc;
   border: 3px solid #92cf59;
   padding: 15px;
   padding: 1.5rem;
@@ -1191,11 +1194,11 @@ padding-bottom: 0.5rem;*/
   border-radius: 50%;
 }
 .sticky {
-  color: #555555;
+  color: #333036;
 }
 .sticky h1,
 .sticky .h1 {
-  color: #555555;
+  color: #333036;
 }
 .articlelist h3 + .view {
   padding-top: 20.4px;
@@ -1213,7 +1216,7 @@ padding-bottom: 0.5rem;*/
 }
 .filter {
   background: #92cf59;
-  color: #555555;
+  color: #333036;
   padding: 15px 30px;
   padding: 1.5rem 30px;
   padding: 15px 3rem;
@@ -1231,7 +1234,7 @@ padding-bottom: 0.5rem;*/
 }
 .filter h1,
 .filter .h1 {
-  color: #555555;
+  color: #333036;
 }
 .filter h3 {
   font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -1264,14 +1267,14 @@ padding-bottom: 0.5rem;*/
   font-size: 2.4rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
-  color: #5e1c11;
+  color: #0d0c0e;
 }
 .filter ul {
   list-style: none;
   padding-left: 0;
 }
 .filter ul li a.active {
-  color: #fcfcfc;
+  color: #fffaf9;
   background: #971e23;
 }
 .filter ul li a:before {
@@ -1283,7 +1286,7 @@ padding-bottom: 0.5rem;*/
   font-size: 2.4rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
-  color: #5e1c11;
+  color: #0d0c0e;
 }
 .topics ul {
   padding-left: 0;
@@ -1300,7 +1303,7 @@ padding-bottom: 0.5rem;*/
 .topics ul li a,
 .topics .field-item a {
   background: #a3d1cc;
-  color: #5e1c11;
+  color: #0d0c0e;
   padding: 3px;
   padding: 0.3rem;
   -webkit-border-radius: 3px;
@@ -1330,7 +1333,7 @@ padding-bottom: 0.5rem;*/
   padding-bottom: 2.04rem;
 }
 .relevant {
-  border-top: 1px solid #5e1c11;
+  border-top: 1px solid #0d0c0e;
   padding-top: 10.2px;
   padding-top: 1.02rem;
   margin-top: 20.4px;
@@ -1373,7 +1376,7 @@ ul.linklist li a:before {
   direction: rtl;
 }
 .button a {
-  color: #fcfcfc;
+  color: #fffaf9;
   text-decoration: none;
 }
 .webform-grid .radio,
@@ -1408,7 +1411,7 @@ label.option {
 .form-submit {
   background: #c12b09;
   display: inline-block;
-  color: #fcfcfc;
+  color: #fffaf9;
   text-align: center;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
@@ -1440,7 +1443,7 @@ label.option {
 .form-submit:hover {
   background: #971e23;
   text-decoration: none;
-  color: #fcfcfc;
+  color: #fffaf9;
 }
 textarea {
   font-size: 1.1em;
@@ -1498,11 +1501,11 @@ td {
 }
 /* top logo & menu of thranslated pages */
 .translated a {
-  color: #fcfcfc !important;
+  color: #fffaf9 !important;
   padding-bottom: 10px;
 }
 .translated a:hover {
-  color: #555555 !important;
+  color: #333036 !important;
   text-decoration: none;
 }
 .translated {
@@ -1524,13 +1527,13 @@ td {
   background-color: #fffdf6 !important;
 }
 .page-trackography .articles .fields {
-  background-color: #fcfcfc !important;
+  background-color: #fffaf9 !important;
 }
 .page-trackography .view-header {
   *zoom: 1;
-  border: 1px dashed #555555;
-  background: #fcfcfc;
-  color: #5e1c11;
+  border: 1px dashed #333036;
+  background: #fffaf9;
+  color: #0d0c0e;
   position: relative;
   padding: 30px 15px;
   /*padding: 3rem 15px;   
