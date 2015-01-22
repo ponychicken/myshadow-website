@@ -624,7 +624,7 @@ h6.meta a:before {
   }
   40% {
     -webkit-transform: translate(1px, -1px) rotate(1deg);
-  }
+  } 
   50% {
     -webkit-transform: translate(-1px, 2px) rotate(-1deg);
   }
