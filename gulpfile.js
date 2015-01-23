@@ -1,54 +1,33 @@
 var gulp = require('gulp'),
-  nodemon = require('gulp-nodemon'),
   livereload = require('gulp-livereload'),
   less = require('gulp-less'),
-  es6transpiler = require('gulp-es6-transpiler'),
-  cached = require('gulp-cached'),
   http = require('http'),
   st = require('st');
+var ghpages = require('gulp-gh-pages');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('less', function () {
-  gulp.src('./sites/**/*.less')
+  gulp.src('./src/**/*.less')
+    .pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(gulp.dest('./sites/'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./src/'))
     .pipe(livereload());
 });
 
 gulp.task('server', function(done) {
   http.createServer(
-    st({ path: __dirname, index: 'index.html', cache: false })
+    st({ path: __dirname + '/src', index: 'index.html', cache: false })
   ).listen(8080, done);
 });
 
-gulp.task('watch', ['server'], function() {
+gulp.task('default', ['less', 'server'], function() {
   livereload.listen();
-  gulp.watch('./sites/**/*.less', ['less']);
-  gulp.watch('src/**/*.js', ['es6']);
+  gulp.watch('./src/sites/**/*.less', ['less']);
 });
 
-gulp.task('es6', function() {
-  return gulp.src('src/**/*.js')
-        .pipe(cached('es6'))
-        .pipe(es6transpiler())
-        .pipe(gulp.dest('dist'));
+// Push to gh-pages
+gulp.task('deploy', function () {
+	return gulp.src('./src/**/*')
+		.pipe(ghpages());
 });
-
-gulp.task('develop', function () {
-  livereload.listen();
-  nodemon({
-    script: 'bin/www',
-    ext: 'js jade',
-    ignore: ['public/*', 'src/*']
-  }).on('restart', function () {
-    setTimeout(function () {
-      //livereload.changed();
-    }, 1500);
-  });
-});
-
-gulp.task('default', [
-  'less',
-  'es6',
-  'develop',
-  'watch'
-]);
