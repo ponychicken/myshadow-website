@@ -1,24 +1,24 @@
 // Base colors
 @green:  hsl(124, 73%, 34%);
 @blue:   hsl(195, 82%, 28%);
-@red:    hsl(2,   85%, 46%);
-@orange: hsl(29,  90%, 56%);
+@red:    hsl(1,   85%, 46%);
+@orange: #5f4385;
 
 // Neutral colors
-@paper:  #FFFAF9;
-@grey:   #333036;
+@paper:  hsl(10, 100%, 99%);
+@grey:   hsl(270, 6%, 20%);
 
 // Light versions
 @light-blue:   desaturate(lighten(spin(@blue,   -5),  50), 20%);
 @light-green:  desaturate(lighten(spin(@green,  -10), 43), 20%);
 @light-red:    desaturate(lighten(spin(@red,    -10), 41), 20%);
-@light-orange: desaturate(lighten(spin(@orange,  10), 25), 0%);
+@light-orange: desaturate(lighten(spin(@orange,  10), 40), 20%);
 
 // Medium versions
 @medium-blue:   desaturate(lighten(spin(@blue,  -3), 28), 20%);
 @medium-green:  desaturate(lighten(spin(@green, -5), 26), 20%);
 @medium-red:    desaturate(lighten(spin(@red,   -3), 28), 12%);
-@medium-orange: desaturate(lighten(spin(@orange, 5), 15), 5%);
+@medium-orange: desaturate(lighten(spin(@orange, 5), 28), 13%);
 
 
 // Shadows are secondary lightness values
@@ -28,10 +28,10 @@
 @medium-red-shadow:    lighten(@red, 15%);
 @medium-orange-shadow: lighten(@orange, 15%);
 
-
-@medium-blue-shadowStrong: darken(@blue, 15%);
-@medium-green-shadowStrong: darken(@green, 10%);
-@medium-red-shadowStrong: darken(@red, 15%);
+@blue-shadow:   darken(@blue,    15%);
+@green-shadow:  darken(@green,   10%);
+@red-shadow:    darken(@red,     15%);
+@orange-shadow: darken(@orange,  15%);
 
 // Text colors
 @dark-grey:  darken(@grey, 15);
@@ -42,7 +42,7 @@
 // DEMO
 #demo {
   display: flex;
-  height: 400px;
+  height: 0px;
   
   div {
     flex: 1;
@@ -111,16 +111,39 @@
 
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 
 a {
   color: @red;
 }
+body {
+  -webkit-font-smoothing: antialiased;
+  background: @paper!important;
+  min-width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.card h5 a {
+  color: @grey!important;
+}
+
+.cards [class*="col-"], .sticky [class*="col-"] {
+  padding: 2rem;
+}
 
 
-
-
+#showColors {
+  position: relative;
+  top: 25px;
+  left: 20px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
 
 
 /*
@@ -401,7 +424,7 @@ h6,
   font-family: 'Museo Slab', Georgia, Times, serif;
   line-height: 1.5;
   font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
 }
@@ -436,7 +459,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
   text-decoration: none;
 }
 a:hover {
-  color: @medium-red-shadowStrong;
+  color: @red-shadow;
 }
 .button {
   background: @red;
@@ -462,9 +485,9 @@ a:hover {
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 @medium-red-shadowStrong;
-  -moz-box-shadow: 0 3px 0 @medium-red-shadowStrong;
-  box-shadow: 0 3px 0 @medium-red-shadowStrong;
+  -webkit-box-shadow: 0 3px 0 @red-shadow;
+  -moz-box-shadow: 0 3px 0 @red-shadow;
+  box-shadow: 0 3px 0 @red-shadow;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -942,9 +965,9 @@ h6.meta a:before {
   -ms-border-radius: 0 0 5px 5px;
   -o-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  -webkit-box-shadow: 0 3px 0 @medium-green-shadowStrong;
-  -moz-box-shadow: 0 3px 0 @medium-green-shadowStrong;
-  box-shadow: 0 3px 0 @medium-green-shadowStrong;
+  -webkit-box-shadow: 0 3px 0 @green-shadow;
+  -moz-box-shadow: 0 3px 0 @green-shadow;
+  box-shadow: 0 3px 0 @green-shadow;
 }
 #header #nav ul li.parent ul li {
   display: block;
@@ -1308,7 +1331,7 @@ padding-bottom: 0.5rem;*/
 }
 .sticky .fields.tool,
 .articlelist .fields.tool {
-  background: #eeeeee;
+  background: @paper;
 }
 .sticky .fields.tool h6.type,
 .articlelist .fields.tool h6.type {
@@ -1571,9 +1594,9 @@ background: @red;
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 @medium-red-shadowStrong;
-  -moz-box-shadow: 0 3px 0 @medium-red-shadowStrong;
-  box-shadow: 0 3px 0 @medium-red-shadowStrong;
+  -webkit-box-shadow: 0 3px 0 @red-shadow;
+  -moz-box-shadow: 0 3px 0 @red-shadow;
+  box-shadow: 0 3px 0 @red-shadow;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -1742,6 +1765,37 @@ article h3{
 .node-type-content #main .col-sm-2, .node-type-page #main .col-sm-2, .node-type-tool-or-tip #main .col-sm-2, .node-type-external-resource #main .col-sm-2{
             display: none !important;
   }
+}
 
+body.dark {
+  #header {
+    background: @grey;
+    color: @paper;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  #logo {
+    -webkit-filter: invert();
+    filter: invert();
+  }
+  
+  #header #nav ul li a {
+    color: @paper;
+  }
+  #footer {
+    border-bottom: 30px solid @grey;
+  }
+  #header #nav ul li.parent ul {
+        background: @grey;
+        color: @paper;
+        box-shadow: none;
+  }
+}
 
+@media (min-width: 767px) {
+  body.dark {
+    #header #nav ul li.parent > a:after {
+      color: @paper;
+    }
+  }
 }

@@ -10,10 +10,10 @@ var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('less', function () {
   gulp.src('./src/**/*.less')
-    .pipe(sourcemaps.init())
+    //.pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write())
+    //.pipe(sourcemaps.write())
     .pipe(gulp.dest('./src/'))
     .pipe(livereload());
 });

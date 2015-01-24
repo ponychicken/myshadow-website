@@ -233,7 +233,7 @@
 
           <div class="view">
             <div class="col-sm-4">
-              <div class="box-color box-center bg-red">
+              <div class="box-color box-center bg-blue">
                 <p><img alt="Find out more" height="200" src=
                 "sites/myshadow2.ttc.io/themes/shadowtwig/img/Cabinettsm.png"
                 width="200">
@@ -245,7 +245,7 @@
                   <!-- templates/blocks/block.html -->
 
 
-                  <h3 class="block-4 delta-12">Digital shadow?</h3>
+                  <h3 class="block-4 delta-12">What is a digital shadow?</h3>
 
 
                   <div>
@@ -270,7 +270,7 @@
 
 
             <div class="col-sm-4">
-              <div class="box-color box-center bg-blue">
+              <div class="box-color box-center bg-green">
                 <p><img alt="Trace my shadow" height="200" src=
                 "sites/myshadow2.ttc.io/themes/shadowtwig/img/Blueprintsm.png"
                 width="200">
@@ -282,7 +282,7 @@
                   <!-- templates/blocks/block.html -->
 
 
-                  <h3 class="block-5 delta-13">Trace my shadow</h3>
+                  <h3 class="block-5 delta-13">What can you do?</h3>
 
 
                   <div>
@@ -306,7 +306,7 @@
 
 
             <div class="col-sm-4">
-              <div class="box-color box-center bg-green">
+              <div class="box-color box-center bg-red">
                 <p><img alt="What's a digital shadow?" height="200" src=
                 "sites/myshadow2.ttc.io/themes/shadowtwig/img/Puppetsm.png"
                 width="200">
@@ -318,7 +318,7 @@
                   <!-- templates/blocks/block.html -->
 
 
-                  <h3 class="block-6 delta-14">Shadow tracer&#039;s kit</h3>
+                  <h3 class="block-6 delta-14">The data industry?</h3>
 
 
                   <div>
@@ -352,7 +352,7 @@
                               <!-- templates/blocks/block.html -->
             
             
-                              <h3 class="block-5 delta-13">The data industry</h3>
+                              <h3 class="block-5 delta-13">Get equipped with materials</h3>
             
             
                               <div>
@@ -601,7 +601,7 @@
                       <!-- templates/views/fields.html -->
 
 
-                      <div class="fields feature bg-red">
+                      <div class="fields feature bg-orange">
                         <!-- controls fields rendering in sticky content blocks (appear on front page, resources, and explore) -->
                         <!-- templates/articlelist/articlelistfields.html -->
 
@@ -633,7 +633,7 @@
                       <!-- templates/views/fields.html -->
 
 
-                      <div class="fields feature bg-red">
+                      <div class="fields feature bg-orange">
                         <!-- controls fields rendering in sticky content blocks (appear on front page, resources, and explore) -->
                         <!-- templates/articlelist/articlelistfields.html -->
 
@@ -667,7 +667,7 @@
                       <!-- templates/views/fields.html -->
 
 
-                      <div class="fields feature bg-red">
+                      <div class="fields feature bg-orange">
                         <!-- controls fields rendering in sticky content blocks (appear on front page, resources, and explore) -->
                         <!-- templates/articlelist/articlelistfields.html -->
 
@@ -698,7 +698,7 @@
                       <!-- templates/views/fields.html -->
 
 
-                      <div class="fields feature bg-red">
+                      <div class="fields feature bg-orange">
                         <!-- controls fields rendering in sticky content blocks (appear on front page, resources, and explore) -->
                         <!-- templates/articlelist/articlelistfields.html -->
 
@@ -855,6 +855,7 @@
         </div>
       </div>
     </div>
+    <a id="showColors">Show Color Palette</a>
   </footer>
   
   <div id="demo">
@@ -888,5 +889,16 @@
     var _paq = _paq || [];(function(){var u=(("https:" == document.location.protocol) ? "https://analytics.tacticaltech.org/" : "http://analytics.tacticaltech.org/");_paq.push(["setSiteId", "16"]);_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setDoNotTrack", 1]);_paq.push(["trackPageView"]);_paq.push(["setIgnoreClasses", ["no-tracking","colorbox"]]);_paq.push(["enableLinkTracking"]);var d=document,g=d.createElement("script"),s=d.getElementsByTagName("script")[0];g.type="text/javascript";g.defer=true;g.async=true;g.src=u+"piwik.js";s.parentNode.insertBefore(g,s);})();
     //--><!]]>
   </script>
+  
+  <script type="text/javascript">
+  if (location.search.indexOf("light") == -1) {
+    document.body.classList.add('dark')
+  }
+  $('#showColors').click(function () {
+    $('#demo').height(400);
+    document.body.scrollTop = document.body.scrollHeight;
+  })
+  </script>
+  
 </body>
 </html>
