@@ -9,7 +9,7 @@
 @grey:   #333036;
  
 // Light versions
-@light-blue:   desaturate(lighten(spin(@blue,   -10), 50), 20%);
+@light-blue:   desaturate(lighten(spin(@blue,   -5), 50), 20%);
 @light-green:  desaturate(lighten(spin(@green,  -10), 40), 20%);
 @light-red:    desaturate(lighten(spin(@red,    -10), 37), 20%);
 @light-orange: lighten(spin(@orange, 10), 25);
@@ -50,6 +50,11 @@
 @medium-blue-shadow:  lighten(@blue, 15%);
 @medium-green-shadow: lighten(@green, 15%);
 @medium-red-shadow:   lighten(@red, 15%);
+
+// Hack
+.col-sm-4 {
+  width: 25%;
+}
 
 
 a {
@@ -420,7 +425,7 @@ a:hover {
 }
 [class*="col-"] {
   padding: 15px;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 [class*="col-"] img {
   max-width: 100%;
