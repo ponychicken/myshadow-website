@@ -1,18 +1,22 @@
-var gulp = require('gulp'),
-  livereload = require('gulp-livereload'),
-  less = require('gulp-less'),
-  http = require('http'),
-  st = require('st');
+var gulp = require('gulp');
+var livereload = require('gulp-livereload');
+var less = require('gulp-less');
+var http = require('http');
+var st = require('st');
 var ghpages = require('gulp-gh-pages');
 var sourcemaps = require('gulp-sourcemaps');
+var debug = require('gulp-debug');
+
+
 
 gulp.task('less', function () {
   gulp.src('./src/**/*.less')
+    .pipe(debug({title: 'unicorn:'}))
     .pipe(sourcemaps.init())
     .pipe(less())
+    .pipe(debug({title: 'be:'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./src/'))
-    .pipe(livereload());
+    .pipe(gulp.dest('./src/'));
 });
 
 gulp.task('server', function(done) {
@@ -23,7 +27,7 @@ gulp.task('server', function(done) {
 
 gulp.task('default', ['less', 'server'], function() {
   livereload.listen();
-  gulp.watch('./src/sites/**/*.less', ['less']);
+  gulp.watch('./src/**/*.less', ['less']);
 });
 
 // Push to gh-pages
