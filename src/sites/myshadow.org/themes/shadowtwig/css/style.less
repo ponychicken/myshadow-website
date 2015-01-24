@@ -2,7 +2,7 @@
 @green:  hsl(124, 73%, 34%);
 @blue:   hsl(195, 82%, 28%);
 @red:    hsl(1,   85%, 46%);
-@orange: #5f4385;
+@purple: #5f4385;
 
 // Neutral colors
 @paper:  hsl(10, 100%, 99%);
@@ -12,13 +12,13 @@
 @light-blue:   desaturate(lighten(spin(@blue,   -5),  50), 20%);
 @light-green:  desaturate(lighten(spin(@green,  -10), 43), 20%);
 @light-red:    desaturate(lighten(spin(@red,    -10), 41), 20%);
-@light-orange: desaturate(lighten(spin(@orange,  10), 40), 20%);
+@light-purple: desaturate(lighten(spin(@purple,  10), 40), 20%);
 
 // Medium versions
 @medium-blue:   desaturate(lighten(spin(@blue,  -3), 28), 20%);
 @medium-green:  desaturate(lighten(spin(@green, -5), 26), 20%);
 @medium-red:    desaturate(lighten(spin(@red,   -3), 28), 12%);
-@medium-orange: desaturate(lighten(spin(@orange, 5), 28), 13%);
+@medium-purple: desaturate(lighten(spin(@purple, 5), 28), 13%);
 
 
 // Shadows are secondary lightness values
@@ -26,12 +26,12 @@
 @medium-blue-shadow:   lighten(@blue, 15%);
 @medium-green-shadow:  lighten(@green, 15%);
 @medium-red-shadow:    lighten(@red, 15%);
-@medium-orange-shadow: lighten(@orange, 15%);
+@medium-purple-shadow: lighten(@purple, 15%);
 
 @blue-shadow:   darken(@blue,    15%);
 @green-shadow:  darken(@green,   10%);
 @red-shadow:    darken(@red,     15%);
-@orange-shadow: darken(@orange,  15%);
+@purple-shadow: darken(@purple,  15%);
 
 // Text colors
 @dark-grey:  darken(@grey, 15);
@@ -85,15 +85,15 @@
     background: @light-green;
   }
 }
-.orange {
+.purple {
   .one {
-    background: @orange;
+    background: @purple;
   }
   .two {
-    background: @medium-orange;
+    background: @medium-purple;
   }
   .three {
-    background: @light-orange;
+    background: @light-purple;
   }
 }
 
@@ -534,8 +534,8 @@ a:hover {
   background: @light-red;
   color: @grey;
 }
-.bg-orange {
-  background: @light-orange;
+.bg-purple {
+  background: @light-purple;
   color: @grey;
 }
 .bg-red h1,
@@ -583,10 +583,10 @@ a:hover {
   -moz-box-shadow: 0 3px 0 @medium-red-shadow;
   box-shadow: 0 3px 0 @medium-red-shadow;
 }
-.box-color.bg-orange {
-  -webkit-box-shadow: 0 3px 0 @medium-orange-shadow;
-  -moz-box-shadow: 0 3px 0 @medium-orange-shadow;
-  box-shadow: 0 3px 0 @medium-orange-shadow;
+.box-color.bg-purple {
+  -webkit-box-shadow: 0 3px 0 @medium-purple-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-purple-shadow;
+  box-shadow: 0 3px 0 @medium-purple-shadow;
 }
 .box-color.bg-green {
   -webkit-box-shadow: 0 3px 0 @medium-green-shadow;
@@ -1107,7 +1107,7 @@ body.page-node #content {
   border-top: none;
 }
 #footer {
-  background: #c5e2df;
+  background: @light-blue;
   color: @grey;
   border-bottom: 30px solid @medium-green;
 }
@@ -1774,10 +1774,10 @@ body.dark {
     -webkit-font-smoothing: antialiased;
   }
   
-  #logo {
-    -webkit-filter: invert();
-    filter: invert();
-  }
+  // #logo {
+  //   -webkit-filter: invert();
+  //   filter: invert();
+  // }
   
   #header #nav ul li a {
     color: @paper;
