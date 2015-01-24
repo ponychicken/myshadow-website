@@ -2,21 +2,40 @@
 @green:  #119928;
 @blue:   #0D6C80;
 @red:    #F02611;
-@yellow: #F07E12;
+@orange: #F07E12;
 
 // Neutral colors
 @paper:  #FFFAF9;
 @grey:   #333036;
  
 // Light versions
-@light-blue:   desaturate(lighten(spin(@blue,  -10), 50), 20%);
-@light-green:  desaturate(lighten(spin(@green, -10), 40), 20%);
-@light-red:    desaturate(lighten(spin(@red,   -10), 37), 20%);
+@light-blue:   desaturate(lighten(spin(@blue,   -10), 50), 20%);
+@light-green:  desaturate(lighten(spin(@green,  -10), 40), 20%);
+@light-red:    desaturate(lighten(spin(@red,    -10), 37), 20%);
+@light-orange: lighten(spin(@orange, 10), 25);
 
 // Medium versions
-@medium-blue:  desaturate(lighten(spin(@blue,  -5), 25), 20%);
-@medium-green: desaturate(lighten(spin(@green, -5), 30), 15%);
-@medium-red:   desaturate(lighten(spin(@red,    10), 37), 32%);
+@medium-blue:   desaturate(lighten(spin(@blue,  -5), 25), 20%);
+@medium-green:  desaturate(lighten(spin(@green, -5), 30), 15%);
+@medium-red:    desaturate(lighten(spin(@red,    10), 37), 32%);
+@medium-orange: desaturate(lighten(spin(@red,    10), 37), 32%);
+
+
+
+// Shadows are secondary lightness values
+// They should be only used on box-shadow attributes
+@medium-blue-shadow:   lighten(@blue, 15%);
+@medium-green-shadow:  lighten(@green, 15%);
+@medium-red-shadow:    lighten(@red, 15%);
+@medium-orange-shadow: lighten(@orange, 15%);
+
+
+
+@medium-blue-shadowStrong: darken(@blue, 15%);
+@medium-green-shadowStrong: darken(@green, 10%);
+@medium-red-shadowStrong: darken(@red, 15%);
+
+
 
 
 // @medium-green: #92CF59;
@@ -28,13 +47,9 @@
 @darkGrey:  darken(@grey, 15);
 @lightGrey: lighten(@grey, 15);
 
-@shadowBlue:  lighten(@blue, 15%);
-@shadowGreen: lighten(@green, 15%);
-@shadowRed:   lighten(@red, 15%);
-
-@shadowBlueStrong: darken(@blue, 15%);
-@shadowGreenStrong: darken(@green, 10%);
-@shadowRedStrong: darken(@red, 15%);
+@medium-blue-shadow:  lighten(@blue, 15%);
+@medium-green-shadow: lighten(@green, 15%);
+@medium-red-shadow:   lighten(@red, 15%);
 
 
 a {
@@ -359,7 +374,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
   text-decoration: none;
 }
 a:hover {
-  color: @shadowRedStrong;
+  color: @medium-red-shadowStrong;
 }
 .button {
   background: @red;
@@ -385,9 +400,9 @@ a:hover {
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 @shadowRedStrong;
-  -moz-box-shadow: 0 3px 0 @shadowRedStrong;
-  box-shadow: 0 3px 0 @shadowRedStrong;
+  -webkit-box-shadow: 0 3px 0 @medium-red-shadowStrong;
+  -moz-box-shadow: 0 3px 0 @medium-red-shadowStrong;
+  box-shadow: 0 3px 0 @medium-red-shadowStrong;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -434,6 +449,10 @@ a:hover {
   background: @light-red;
   color: @grey;
 }
+.bg-orange {
+  background: @light-orange;
+  color: @grey;
+}
 .bg-red h1,
 .bg-red .h1 {
   color: @grey;
@@ -470,19 +489,24 @@ a:hover {
   padding-bottom: 2.04rem;
 }
 .box-color.bg-blue {
-  -webkit-box-shadow: 0 3px 0 @shadowBlue;
-  -moz-box-shadow: 0 3px 0 @shadowBlue;
-  box-shadow: 0 3px 0 @shadowBlue;
+  -webkit-box-shadow: 0 3px 0 @medium-blue-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-blue-shadow;
+  box-shadow: 0 3px 0 @medium-blue-shadow;
 }
 .box-color.bg-red {
-  -webkit-box-shadow: 0 3px 0 @shadowRed;
-  -moz-box-shadow: 0 3px 0 @shadowRed;
-  box-shadow: 0 3px 0 @shadowRed;
+  -webkit-box-shadow: 0 3px 0 @medium-red-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-red-shadow;
+  box-shadow: 0 3px 0 @medium-red-shadow;
+}
+.box-color.bg-orange {
+  -webkit-box-shadow: 0 3px 0 @medium-orange-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-orange-shadow;
+  box-shadow: 0 3px 0 @medium-orange-shadow;
 }
 .box-color.bg-green {
-  -webkit-box-shadow: 0 3px 0 @shadowGreen;
-  -moz-box-shadow: 0 3px 0 @shadowGreen;
-  box-shadow: 0 3px 0 @shadowGreen;
+  -webkit-box-shadow: 0 3px 0 @medium-green-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-green-shadow;
+  box-shadow: 0 3px 0 @medium-green-shadow;
 }
 .box-border {
   *zoom: 1;
@@ -856,9 +880,9 @@ h6.meta a:before {
   -ms-border-radius: 0 0 5px 5px;
   -o-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
-  -webkit-box-shadow: 0 3px 0 @shadowGreenStrong;
-  -moz-box-shadow: 0 3px 0 @shadowGreenStrong;
-  box-shadow: 0 3px 0 @shadowGreenStrong;
+  -webkit-box-shadow: 0 3px 0 @medium-green-shadowStrong;
+  -moz-box-shadow: 0 3px 0 @medium-green-shadowStrong;
+  box-shadow: 0 3px 0 @medium-green-shadowStrong;
 }
 #header #nav ul li.parent ul li {
   display: block;
@@ -1275,9 +1299,9 @@ padding-bottom: 0.5rem;*/
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border-radius: 15px;
-  -webkit-box-shadow: 0 3px 0 @shadowGreen;
-  -moz-box-shadow: 0 3px 0 @shadowGreen;
-  box-shadow: 0 3px 0 @shadowGreen;
+  -webkit-box-shadow: 0 3px 0 @medium-green-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-green-shadow;
+  box-shadow: 0 3px 0 @medium-green-shadow;
 }
 .filter h1,
 .filter .h1 {
@@ -1299,9 +1323,9 @@ padding-bottom: 0.5rem;*/
   box-shadow: 0 3px 0 #9bbcf9;
 }
 .filter.bg-yellow {
-  -webkit-box-shadow: 0 3px 0 @shadowGreen;
-  -moz-box-shadow: 0 3px 0 @shadowGreen;
-  box-shadow: 0 3px 0 @shadowGreen;
+  -webkit-box-shadow: 0 3px 0 @medium-green-shadow;
+  -moz-box-shadow: 0 3px 0 @medium-green-shadow;
+  box-shadow: 0 3px 0 @medium-green-shadow;
 }
 .filter.bg-green {
   -webkit-box-shadow: 0 3px 0 #a3d1cc;
@@ -1485,9 +1509,9 @@ background: @red;
   padding: 1rem 30px;
   padding: 10px 3rem;
   padding: 1rem 3rem;
-  -webkit-box-shadow: 0 3px 0 @shadowRedStrong;
-  -moz-box-shadow: 0 3px 0 @shadowRedStrong;
-  box-shadow: 0 3px 0 @shadowRedStrong;
+  -webkit-box-shadow: 0 3px 0 @medium-red-shadowStrong;
+  -moz-box-shadow: 0 3px 0 @medium-red-shadowStrong;
+  box-shadow: 0 3px 0 @medium-red-shadowStrong;
   text-shadow: none;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
