@@ -39,10 +39,16 @@
 
 
 // Hack
-.col-sm-4 {
-  width: 25%;
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 25%;
+  }
 }
 
+
+.container {
+  max-width: 800px;
+}
 
 a {
   color: @red;
