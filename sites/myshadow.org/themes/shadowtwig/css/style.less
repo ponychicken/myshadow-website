@@ -1,25 +1,24 @@
 // Base colors
-@green:  #119928;
-@blue:   #0D6C80;
-@red:    #f2140e;
-@orange: hsl(29, 88%, 51%);
+@green:  hsl(124, 76%, 34%);
+@blue:   hsl(195, 82%, 28%);
+@red:    hsl(2,   85%, 46%);
+@orange: hsl(29,  90%, 55%);
 
 // Neutral colors
 @paper:  #FFFAF9;
 @grey:   #333036;
- 
+
 // Light versions
-@light-blue:   desaturate(lighten(spin(@blue,   -5), 50), 20%);
-@light-green:  desaturate(lighten(spin(@green,  -10), 40), 20%);
-@light-red:    desaturate(lighten(spin(@red,    -10), 37), 20%);
-@light-orange: lighten(spin(@orange, 10), 25);
+@light-blue:   desaturate(lighten(spin(@blue,   -5),  50), 20%);
+@light-green:  desaturate(lighten(spin(@green,  -10), 43), 20%);
+@light-red:    desaturate(lighten(spin(@red,    -10), 41), 20%);
+@light-orange: desaturate(lighten(spin(@orange,  10), 25), 0%);
 
 // Medium versions
-@medium-blue:   desaturate(lighten(spin(@blue,  -5), 25), 20%);
-@medium-green:  desaturate(lighten(spin(@green, -5), 30), 15%);
-@medium-red:    desaturate(lighten(spin(@red,    10), 37), 32%);
-@medium-orange: desaturate(lighten(spin(@red,    10), 37), 32%);
-
+@medium-blue:   desaturate(lighten(spin(@blue,  -3), 28), 20%);
+@medium-green:  desaturate(lighten(spin(@green, -5), 26), 20%);
+@medium-red:    desaturate(lighten(spin(@red,   -5), 30), 14%);
+@medium-orange: desaturate(lighten(spin(@orange, 5), 15), 5%);
 
 
 // Shadows are secondary lightness values
@@ -39,13 +38,78 @@
 @light-grey: lighten(@grey, 15);
 
 
+
+// DEMO
+#demo {
+  display: flex;
+  height: 400px;
+  
+  div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+  }
+} 
+
+.red {
+  .one {
+    background: @red;
+  }
+  .two {
+    background: @medium-red;
+  }
+  .three {
+    background: @light-red;
+  }
+}
+.blue {
+  .one {
+    background: @blue;
+  }
+  .two {
+    background: @medium-blue;
+  }
+  .three {
+    background: @light-blue;
+  }
+}
+.green {
+  .one {
+    background: @green;
+  }
+  .two {
+    background: @medium-green;
+  }
+  .three {
+    background: @light-green;
+  }
+}
+.orange {
+  .one {
+    background: @orange;
+  }
+  .two {
+    background: @medium-orange;
+  }
+  .three {
+    background: @light-orange;
+  }
+}
+
+
+
+
+
+
 // Hack
-.col-sm-4 {
-  width: 25%;
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 25%;
+  }
 }
-body {
-  width: 105%;
-}
+
+
 .container {
   max-width: 800px;
 }
