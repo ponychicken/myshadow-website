@@ -1,38 +1,44 @@
 // Base colors
 @green:  #119928;
-@blue:   #0C617A;
-@red:    #C1220C;
-@yellow: #F0851A;
+@blue:   #0D6C80;
+@red:    #F02611;
+@yellow: #F07E12;
 
 // Neutral colors
 @paper:  #FFFAF9;
 @grey:   #333036;
+ 
+// Light versions
+@light-blue:   desaturate(lighten(spin(@blue,  -10), 50), 20%);
+@light-green:  desaturate(lighten(spin(@green, -10), 40), 20%);
+@light-red:    desaturate(lighten(spin(@red,   -10), 37), 20%);
 
-// // Light versions
-// @lightBlue:  desaturate(lighten(spin(@blue,  -10), 50), 45%);
-// @lightGreen: desaturate(lighten(spin(@green, -10), 42), 15%);
-// @lightRed:   desaturate(lighten(spin(@red,    10), 37), 32%);
-// 
-// 
-// // @green: #92CF59;
-// // @blue: #72B3B8;
-// // @red: desaturate(lighten(spin(@strongRed, -5), 7.5), 40%);
+// Medium versions
+@medium-blue:  desaturate(lighten(spin(@blue,  -5), 25), 20%);
+@medium-green: desaturate(lighten(spin(@green, -5), 30), 15%);
+@medium-red:   desaturate(lighten(spin(@red,    10), 37), 32%);
+
+
+// @medium-green: #92CF59;
+// @medium-blue: #72B3B8;
+// // @red: desaturate(lighten(spin(@red, -5), 7.5), 40%);
 // // 
 // // @grey:      #333036;
-// @darkGrey:  darken(@grey, 15);
-// @lightGrey: lighten(@grey, 15);
-// 
-// @shadowBlue:  lighten(@blue, 15%);
-// @shadowGreen: lighten(@green, 15%);
-// @shadowRed:   lighten(@red, 15%);
-// 
-// @shadowBlueStrong: darken(@strongBlue, 15%);
-// @shadowGreenStrong: darken(@strongGreen, 10%);
-// @shadowRedStrong: darken(@strongRed, 15%);
+
+@darkGrey:  darken(@grey, 15);
+@lightGrey: lighten(@grey, 15);
+
+@shadowBlue:  lighten(@blue, 15%);
+@shadowGreen: lighten(@green, 15%);
+@shadowRed:   lighten(@red, 15%);
+
+@shadowBlueStrong: darken(@blue, 15%);
+@shadowGreenStrong: darken(@green, 10%);
+@shadowRedStrong: darken(@red, 15%);
 
 
 a {
-  color: @strongRed;
+  color: @red;
 }
 
 
@@ -223,7 +229,7 @@ h1,
 	    Unfortunately I don't think this is doing anything, since fontspring fonts have opentype features disabled.
 	    See here: http://www.fontspring.com/support/general/difference-between-desktop-font-and-webfont
     */
-  color: @strongRed;
+  color: @red;
   line-height: 1;
   font-size: 45px;
   font-size: 4.5rem;
@@ -274,7 +280,7 @@ h5,
 }
 h2,
 .h2 {
-  color: @strongRed;
+  color: @red;
   font-family: 'Museo Slab', Georgia, Times, serif;
   line-height: 1.2;
   font-size: 48px;
@@ -345,18 +351,18 @@ ol li {
   padding-bottom: 0;
 }
 /* a {
-  color: @strongRed;
+  color: @red;
   text-decoration: none;
 } */
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
-    color: @strongRed;
+    color: @red;
   text-decoration: none;
 }
 a:hover {
   color: @shadowRedStrong;
 }
 .button {
-  background: @strongRed;
+  background: @red;
   display: inline-block;
   color: @paper;
   cursor:pointer;
@@ -417,7 +423,7 @@ a:hover {
   color: @grey;
 }
 .bg-green {
-  background: @lightGreen;
+  background: @light-green;
   color: @grey;
 }
 .bg-green h1,
@@ -425,7 +431,7 @@ a:hover {
   color: @grey;
 }
 .bg-red {
-  background: @lightRed;
+  background: @light-red;
   color: @grey;
 }
 .bg-red h1,
@@ -433,7 +439,7 @@ a:hover {
   color: @grey;
 }
 .bg-blue {
-  background: @lightBlue;
+  background: @light-blue;
   color: @grey;
 }
 .bg-blue h1,
@@ -558,7 +564,7 @@ a:hover {
 }
 h6.type {
   color: @paper;
-  background: @strongRed;
+  background: @red;
   font-family: 'Populaire Regular', 'Museo Slab', Georgia, Times, serif;
   -webkit-font-feature-settings: "liga" 1, "dlig" 1, "calt" 1, "salt" 1;
   -moz-font-feature-settings: "liga=1, dlig=1", "calt=1", "salt=1";
@@ -776,7 +782,7 @@ h6.meta a:before {
   -moz-animation-duration: 15s;
 }
 #header {
-  background: @green;
+  background: @medium-green;
   color: @grey;
   *zoom: 1;
   position: relative;
@@ -842,7 +848,7 @@ h6.meta a:before {
   width: auto;
   text-align: left;
   white-space: nowrap;
-  background: @green;
+  background: @medium-green;
   margin-top: -5px;
   margin-top: -0.5rem;
   -webkit-border-radius: 0 0 5px 5px;
@@ -950,7 +956,7 @@ body.not-front #intro .content{
 }
 
 #intro {
-  background: @lightBlue; 
+  background: @light-blue; 
   color: @grey;
   text-align: center;
 }
@@ -994,7 +1000,7 @@ body.page-node #content {
 #footer {
   background: #c5e2df;
   color: @grey;
-  border-bottom: 30px solid @green;
+  border-bottom: 30px solid @medium-green;
 }
 #footer h1,
 #footer .h1 {
@@ -1220,12 +1226,12 @@ padding-bottom: 0.5rem;*/
 }
 .sticky .fields.tool h6.type,
 .articlelist .fields.tool h6.type {
-  background: @strongGreen;
+  background: @green;
   color: @grey;
 }
 .sticky .fields.tool .image,
 .articlelist .fields.tool .image {
-  border: 3px solid @green;
+  border: 3px solid @medium-green;
   padding: 15px;
   padding: 1.5rem;
   -webkit-border-radius: 50%;
@@ -1256,7 +1262,7 @@ padding-bottom: 0.5rem;*/
   margin-left: 1.02rem;
 }
 .filter {
-  background: @green;
+  background: @medium-green;
   color: @grey;
   padding: 15px 30px;
   padding: 1.5rem 30px;
@@ -1458,7 +1464,7 @@ tr.even {background-color:rgba(255,255,255,.1);}
 }
 
 .form-submit{
-background: @strongRed;
+background: @red;
   display: inline-block;
   color: @paper;
   text-align: center;
