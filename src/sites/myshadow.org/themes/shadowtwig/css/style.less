@@ -1,8 +1,8 @@
 // Base colors
 @green:  #119928;
 @blue:   #0D6C80;
-@red:    #F02611;
 @orange: #F07E12;
+@red:    #f2140e;
 
 // Neutral colors
 @paper:  #FFFAF9;
@@ -34,9 +34,9 @@
 @medium-green-shadowStrong: darken(@green, 10%);
 @medium-red-shadowStrong: darken(@red, 15%);
 
-
-@darkGrey:  darken(@grey, 15);
-@lightGrey: lighten(@grey, 15);
+// Text colors
+@dark-grey:  darken(@grey, 15);
+@light-grey: lighten(@grey, 15);
 
 
 // Hack
@@ -222,7 +222,7 @@ a {
 */
 body {
   background: @paper;
-  color: @darkGrey;
+  color: @dark-grey;
   font-family: 'Museo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 h1,
@@ -505,7 +505,7 @@ a:hover {
   *zoom: 1;
   border: 1px dashed @grey;
   background: @paper;
-  color: @darkGrey;
+  color: @dark-grey;
   position: relative;
   padding: 30px 15px;
   padding: 3rem 15px;
@@ -896,7 +896,7 @@ h6.meta a:before {
   }
   #header #nav ul li.parent > a:after {
     content: "▼";
-    color: @darkGrey;
+    color: @dark-grey;
     vertical-align: middle;
     text-decoration: none !important;
     font-size: 15px;
@@ -912,7 +912,7 @@ h6.meta a:before {
   }
 }
 #header #nav ul li a {
-  color: @darkGrey;
+  color: @dark-grey;
   text-decoration: none;
   display: inline-block;
   padding: 15px;
@@ -1157,7 +1157,7 @@ article .title .col-sm-10{
 
 
   /* border: 1px dashed @grey; */
-color: @darkGrey;   
+color: @dark-grey;   
 position: relative;
 padding: 30px 15px;
 /*padding: 3rem 15px;   
@@ -1331,7 +1331,7 @@ padding-bottom: 0.5rem;*/
   font-size: 2.4rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
-  color: @darkGrey;
+  color: @dark-grey;
 }
 .filter ul {
   list-style: none;
@@ -1350,7 +1350,7 @@ padding-bottom: 0.5rem;*/
   font-size: 2.4rem;
   padding-bottom: 10.2px;
   padding-bottom: 1.02rem;
-  color: @darkGrey;
+  color: @dark-grey;
 }
 .topics ul {
   padding-left: 0;
@@ -1367,7 +1367,7 @@ padding-bottom: 0.5rem;*/
 .topics ul li a,
 .topics .field-item a {
   background: #a3d1cc;
-  color: @darkGrey;
+  color: @dark-grey;
   padding: 3px;
   padding: 0.3rem;
   -webkit-border-radius: 3px;
@@ -1397,7 +1397,7 @@ padding-bottom: 0.5rem;*/
   padding-bottom: 2.04rem;
 }
 .relevant {
-  border-top: 1px solid @darkGrey;
+  border-top: 1px solid @dark-grey;
   padding-top: 10.2px;
   padding-top: 1.02rem;
   margin-top: 20.4px;
@@ -1622,7 +1622,7 @@ td {
   *zoom: 1;
 border: 1px dashed @grey;
 background: @paper;   
-color: @darkGrey;   
+color: @dark-grey;   
 position: relative;
 padding: 30px 15px;
 /*padding: 3rem 15px;   
