@@ -52,7 +52,7 @@
   background: #5f4385;
 }
 .orange .two {
-  background: #a797b5;
+  background: #ac9bbc;
 }
 .orange .three {
   background: #cbc3d1;
@@ -72,6 +72,9 @@ body {
   -webkit-font-smoothing: antialiased;
   background: #fffbfa !important;
   min-width: 100vw;
+}
+html {
+  overflow-x: hidden;
 }
 .card h5 a {
   color: #333036 !important;

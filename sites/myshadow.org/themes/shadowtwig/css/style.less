@@ -18,7 +18,7 @@
 @medium-blue:   desaturate(lighten(spin(@blue,  -3), 28), 20%);
 @medium-green:  desaturate(lighten(spin(@green, -5), 26), 20%);
 @medium-red:    desaturate(lighten(spin(@red,   -3), 28), 12%);
-@medium-orange: desaturate(lighten(spin(@orange, 5), 26), 16%);
+@medium-orange: desaturate(lighten(spin(@orange, 5), 28), 13%);
 
 
 // Shadows are secondary lightness values
@@ -121,6 +121,10 @@ body {
   -webkit-font-smoothing: antialiased;
   background: @paper!important;
   min-width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .card h5 a {
