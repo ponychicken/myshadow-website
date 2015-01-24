@@ -894,9 +894,8 @@
   if (location.search.indexOf("light") == -1) {
     document.body.classList.add('dark')
   }
-  $('#demo').hide();
   $('#showColors').click(function () {
-    $('#demo').show();
+    $('#demo').height(400);
     document.body.scrollTop = document.body.scrollHeight;
   })
   </script>
