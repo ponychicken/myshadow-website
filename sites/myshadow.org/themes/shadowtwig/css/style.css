@@ -71,6 +71,7 @@ a {
 body {
   -webkit-font-smoothing: antialiased;
   background: #fffbfa !important;
+  min-width: 100vw;
 }
 .card h5 a {
   color: #333036 !important;
