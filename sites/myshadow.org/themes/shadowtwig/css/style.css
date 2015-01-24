@@ -79,6 +79,10 @@ html {
 .card h5 a {
   color: #333036 !important;
 }
+.cards [class*="col-"],
+.sticky [class*="col-"] {
+  padding: 2rem;
+}
 #showColors {
   position: relative;
   top: 25px;
