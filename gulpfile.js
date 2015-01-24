@@ -5,16 +5,14 @@ var http = require('http');
 var st = require('st');
 var ghpages = require('gulp-gh-pages');
 var sourcemaps = require('gulp-sourcemaps');
-var debug = require('gulp-debug');
-
+var autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('less', function () {
   gulp.src('./src/**/*.less')
-    .pipe(debug({title: 'unicorn:'}))
     .pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(debug({title: 'be:'}))
+    .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./src/'))
     .pipe(livereload());
