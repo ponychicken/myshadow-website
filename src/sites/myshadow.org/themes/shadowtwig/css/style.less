@@ -1,25 +1,24 @@
 // Base colors
-@green:  #119928;
-@blue:   #0D6C80;
-@orange: #F07E12;
-@red:    #f2140e;
+@green:  hsl(130, 80%, 33%);
+@blue:   hsl(195, 82%, 28%);
+@red:    hsl(2,   90%, 50%);
+@orange: hsl(29,  88%, 51%);
 
 // Neutral colors
 @paper:  #FFFAF9;
 @grey:   #333036;
- 
+
 // Light versions
-@light-blue:   desaturate(lighten(spin(@blue,   -5), 50), 20%);
+@light-blue:   desaturate(lighten(spin(@blue,   -5),  50), 20%);
 @light-green:  desaturate(lighten(spin(@green,  -10), 40), 20%);
 @light-red:    desaturate(lighten(spin(@red,    -10), 37), 20%);
-@light-orange: lighten(spin(@orange, 10), 25);
+@light-orange: desaturate(lighten(spin(@orange,  10), 25), 0%);
 
 // Medium versions
 @medium-blue:   desaturate(lighten(spin(@blue,  -5), 25), 20%);
 @medium-green:  desaturate(lighten(spin(@green, -5), 30), 15%);
 @medium-red:    desaturate(lighten(spin(@red,    10), 37), 32%);
 @medium-orange: desaturate(lighten(spin(@red,    10), 37), 32%);
-
 
 
 // Shadows are secondary lightness values
