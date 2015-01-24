@@ -16,7 +16,8 @@ gulp.task('less', function () {
     .pipe(less())
     .pipe(debug({title: 'be:'}))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./src/'));
+    .pipe(gulp.dest('./src/'))
+    .pipe(livereload());
 });
 
 gulp.task('server', function(done) {

@@ -1,33 +1,44 @@
-@strongGreen: #4E9919;
-@strongBlue: #0C637D;
-@strongRed: #C12B09;
-@paper: #FFFAF9;
+// Base colors
+@green:  #119928;
+@blue:   #0C617A;
+@red:    #C1220C;
+@yellow: #F0851A;
 
-@green: #92CF59;
-@blue: #72B3B8;
-//@red: spin(#D67F60;
-@red: desaturate(lighten(spin(@strongRed, -5), 7.5), 40%);
+// Neutral colors
+@paper:  #FFFAF9;
+@grey:   #333036;
 
-@grey: #333036;
-@darkGrey: darken(@grey, 15);
-@lightGrey: lighten(@grey, 15);
-
-@lightBlue:  desaturate(lighten(spin(@strongBlue, -10), 50), 45%);
-@lightGreen: lighten(@green, 20%);
-@lightRed:   desaturate(lighten(spin(@strongRed, 10), 37), 32%);
-
-@shadowBlue: lighten(@blue, 15%);
-@shadowGreen: lighten(@green, 15%);
-@shadowRed: lighten(@red, 15%);
-
-@shadowBlueStrong: darken(@strongBlue, 15%);
-@shadowGreenStrong: darken(@strongGreen, 10%);
-@shadowRedStrong: darken(@strongRed, 15%);
+// // Light versions
+// @lightBlue:  desaturate(lighten(spin(@blue,  -10), 50), 45%);
+// @lightGreen: desaturate(lighten(spin(@green, -10), 42), 15%);
+// @lightRed:   desaturate(lighten(spin(@red,    10), 37), 32%);
+// 
+// 
+// // @green: #92CF59;
+// // @blue: #72B3B8;
+// // @red: desaturate(lighten(spin(@strongRed, -5), 7.5), 40%);
+// // 
+// // @grey:      #333036;
+// @darkGrey:  darken(@grey, 15);
+// @lightGrey: lighten(@grey, 15);
+// 
+// @shadowBlue:  lighten(@blue, 15%);
+// @shadowGreen: lighten(@green, 15%);
+// @shadowRed:   lighten(@red, 15%);
+// 
+// @shadowBlueStrong: darken(@strongBlue, 15%);
+// @shadowGreenStrong: darken(@strongGreen, 10%);
+// @shadowRedStrong: darken(@strongRed, 15%);
 
 
 a {
   color: @strongRed;
 }
+
+
+
+
+
 
 /*
  * Web Fonts from fontspring.com
